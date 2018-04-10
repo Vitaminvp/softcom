@@ -1,6 +1,48 @@
-﻿header{
+﻿	@font-face {
+			font-family: "ProximaNova";
+			src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+			src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+			url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "ProximaNova";
+			src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+			src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+			url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+			font-style: Bold;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "ProximaNovaBlack";
+			src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
+			src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff"),
+			url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
     background-color: #69b246;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 header img{
     width: 200px;
+}
+.top{
+}
+.top ul{
+    display: flex;
+    list-style-type: none;
 }

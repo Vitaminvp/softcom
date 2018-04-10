@@ -1,18 +1,81 @@
-﻿html{
+﻿@font-face {
+    font-family: "Helios";
+    src: url("../fonts/HeliosRegular/HeliosRegular.eot");
+    src: url("../fonts/HeliosRegular/HeliosRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HeliosRegular/HeliosRegular.woff") format("woff"),
+    url("../fonts/HeliosRegular/HeliosRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HeliosBlack";
+    src: url("../fonts/HeliosBlack/HeliosBlack.eot");
+    src: url("../fonts/HeliosBlack/HeliosBlack.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HeliosBlack/HeliosBlack.woff") format("woff"),
+    url("../fonts/HeliosBlack/HeliosBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'ds_motion_demoitalic';
+    src: url('../fonts/ds_motion_demo-webfont/ds_motion_demo-webfont.woff2') format('woff2'),
+    url('../fonts/ds_motion_demo-webfont/ds_motion_demo-webfont.woff') format('woff'),
+    url("../fonts/ds_motion_demo-webfont/ds_motion_demo-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html {
     margin: 0;
     padding: 0;
 }
+
 body {
-    background: #2c5ea4;
+    /*    background: #2c5ea4;*/
     color: #363636;
     margin: 0;
     padding: 0;
     font-weight: 400;
+    font-family: Helios, sans-serif;
+    font-size: 25px;
+    line-height: 1.6;
 }
-header{
+
+.wrapper{
+    max-width: 1138px;
+    margin: 0 auto;
+}
+
+header {
     background: #2c5ea4;
     position: relative;
+    color: #faed00;
 }
+
+.header-content-top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+
+}
+
+.superman {
+    background-image: url(../img/sm.png);
+    background-size: contain;
+    width: 35%;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.header-text {
+    width: 65%;
+}
+
+/*
 header:after {
     content: "";
     position: absolute;
@@ -22,47 +85,187 @@ header:after {
     right: 0;
     background: linear-gradient(to bottom left, #2c5ea4 49%, transparent 50%);
 }
+*/
+
 .header-skewed-bg {
-    padding: 50px 0 50px;
-/*
     transform: skew(0deg, 2deg);
     margin-top: -200px;
-*/
+    padding: 200px 0 20px;
+    background-image: linear-gradient(to right, #f75e73 0%, #bea0ac 30%, #245aa6 55%, #245aa6 100%);
+    border-bottom: 2px solid #c20b19;
 }
-section{
+
+.header-text h1 {
+    font-family: ds_motion_demoitalic, sans-serif;
+    color: #faed00;
+    font-size: 80px;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    line-height: 1.1;
+    text-align: center;
+    /*        -webkit-text-stroke: 2px #f80000;*/
+    text-shadow: -0 -5px 1px #F80000,
+    0 -5px 1px #F80000,
+    -0 5px 1px #F80000,
+    0 5px 1px #F80000,
+    -5px -0 1px #F80000,
+    5px -0 1px #F80000,
+    -5px 0 1px #F80000,
+    5px 0 1px #F80000,
+    -1px -5px 1px #F80000,
+    1px -5px 1px #F80000,
+    -1px 5px 1px #F80000,
+    1px 5px 1px #F80000,
+    -5px -1px 1px #F80000,
+    5px -1px 1px #F80000,
+    -5px 1px 1px #F80000,
+    5px 1px 1px #F80000,
+    -2px -5px 1px #F80000,
+    2px -5px 1px #F80000,
+    -2px 5px 1px #F80000,
+    2px 5px 1px #F80000,
+    -5px -2px 1px #F80000,
+    5px -2px 1px #F80000,
+    -5px 2px 1px #F80000,
+    5px 2px 1px #F80000,
+    -3px -5px 1px #F80000,
+    3px -5px 1px #F80000,
+    -3px 5px 1px #F80000,
+    3px 5px 1px #F80000,
+    -5px -3px 1px #F80000,
+    5px -3px 1px #F80000,
+    -5px 3px 1px #F80000,
+    5px 3px 1px #F80000,
+    -4px -5px 1px #F80000,
+    4px -5px 1px #F80000,
+    -4px 5px 1px #F80000,
+    4px 5px 1px #F80000,
+    -5px -4px 1px #F80000,
+    5px -4px 1px #F80000,
+    -5px 4px 1px #F80000,
+    5px 4px 1px #F80000,
+    -5px -5px 1px #F80000,
+    5px -5px 1px #F80000,
+    -5px 5px 1px #F80000,
+    5px 5px 1px #F80000,
+    -5px -5px 1px #F80000,
+    5px -5px 1px #F80000,
+    -5px 5px 1px #F80000,
+    5px 5px 1px #F80000;
+}
+
+.header-text ol {
+    /*    list-style-type: none;*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px 0 60px;
+    z-index: 1;
+}
+
+.header-text ol li::after {
+    position: absolute;
+    content: "\f005";
+    font-family: FontAwesome;
+    /*    color: rgba(250, 237, 0, .3);*/
+    color: rgba(255, 255, 255, .6);
+    font-size: 55px;
+    top: -19px;
+    left: -62px;
+    z-index: -1;
+}
+
+.header-text ol li::before {
+    position: absolute;
+    left: -45px;
+    top: 0;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    content: counter(custom) " ";
+}
+
+.header-text ol li {
+    counter-increment: custom;
+    position: relative;
+}
+
+.header-text ol li:first-child {
+    counter-reset: custom;
+}
+
+.free {
+    margin: 0;
+    text-align: right;
+    padding-right: 180px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #630d0c 0%, #f80000 64%, #f80000 100%);
+}
+
+.free p {
+    margin: 0;
+}
+
+.cls-1,
+.cls-2 {
+    fill: #fff;
+}
+
+.cls-1 {
+    fill-rule: evenodd;
+}
+
+.logo svg {
+    display: block;
+    width: 300px;
+    min-width: 100px;
+    fill: #fff;
+}
+
+section {
     background-color: #fff;
     color: #363636;
 }
-.content {
-/*    transform: skew(0deg, -2deg);*/
-    text-align: center;
-}
 
-.title {
-/*    padding-top: 100px;*/
-    font-weight: normal;
+.header-content {
+    transform: skew(0deg, -2deg);
+    /*    text-align: center;*/
 }
 
 .text {
-    width: 80%;
-    margin: 25px auto;
+    margin-left: 20px;
 }
 
 .section {
-    padding: 100px 0;
-}
-
-.section .text {
-    
-}
-
-.footer-skewed-bg{
     padding: 50px 0;
 }
+
+.section .yellow {
+    margin-top: -55px;
+    float: right;
+    background-color: #faed00;
+    width: 30%;
+    padding: 55px 3% 3%;
+}
+.section .white {
+    background-color: #fff;
+    padding: 0 3% 0;
+}
+
+.section .white h2{
+    margin-top: 0;
+}
+
+.footer-skewed-bg {
+    padding: 0;
+}
+
 footer {
     background: #2c5ea4;
     position: relative;
     bottom: 0;
+    width: 100%;
 }
 
 footer:before {
@@ -73,4 +276,12 @@ footer:before {
     left: 0;
     right: 0;
     background: linear-gradient(to bottom left, transparent 49%, #2c5ea4 50%);
+}
+
+.foter-content {
+    display: flex;
+/*    width: 100%;*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
 }

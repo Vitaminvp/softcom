@@ -434,7 +434,9 @@
     transform: rotateY(180deg) rotateX(180deg);
 }
 
-
+.feedback{
+    background: url(../img/bg.jpg) rgba(0, 0, 0, 0.9);
+}
 
 
 

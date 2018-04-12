@@ -10,39 +10,47 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/style.css">
-    <!--    <script src="js/script.js"></script>-->
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/script.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container-flex">
             <div class="row">
-                <div class="col-lg-12 d-flex justify-content-around top">
+                <div class="col-lg-12 d-flex justify-content-around align-items-center top flex-column flex-md-row order-1">
                     <div class="logo"><img src="img/logo_w_mo-01.svg" alt="Logo"></div>
-                    <nav>
+                    <nav class="top_menu order-3 d-flex flex-column align-items-center">
+                        <button class="togglemenu">
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </button>
                         <ul>
                             <li><a href="#">Преимущества</a></li>
                             <li><a href="#">Правила проживания</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </nav>
-                    <div class="contacts">
+                    <div class="contacts order-2">
                         <ul>
-                            <li><img src="img/Layer08.png" alt=""><a href="tel:0933495478">(093) 349 - 54 - 78</a></li>
-                            <li><a href="tel:0933495478">(093) 349 - 54 - 78</a></li>
+                            <li><img src="img/Layer08.png" alt=""><a href="tel:0933495478">(093)&nbsp;349&nbsp;54&nbsp;78</a></li>
+                            <li><a href="tel:0933495478">(093)&nbsp;349&nbsp;54&nbsp;78</a></li>
                         </ul>
                     </div>
 
                 </div>
             </div>
+        </div>
+        <div class="container d-flex h-90 align-self-center">
             <div class="row">
-                <div class="col-lg-12 d-flex header-content">
+                <div class="col-lg-12 d-flex header-content justify-content-center align-items-center">
                     <div class="header-text">
                         <h1>Мегаполис&nbsp;<span class="t">-</span><br /> <span>твой комфорт в большом городе</span></h1>
 
                         <a href="#" class="order">Забронировать</a>
                     </div>
-                    <div class="header-img">
+                    <div class="header-img 	d-none d-lg-block">
                         <img src="img/flat.png" alt="" class="img-fluid">
                     </div>
                 </div>
@@ -211,19 +219,24 @@
     </section>
     <section class="feedback">
         <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <h2 class="invert">Обратная связь</h2>
+                  </div>
+              </div>
                <forma class="form">
             <div class="row">
-                    <div class="col-lg-6">
-                    <input type="text" required>
-                    <input type="email" required>
-                    <input type="phone" required>
+                    <div class="col-lg-6 flex-column d-flex align-items-lg-end">
+                        <input type="text" required placeholder="Имя">
+                        <input type="email" required placeholder="Email">
+                        <input type="phone" required placeholder="Телефон">
                     </div>
-                    <div class="col-lg-6">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <div class="col-lg-6 d-flex justify-content-lg-start">
+                        <textarea name="textarea" id="" required placeholder="Сообщение"></textarea>
                     </div>
             </div>
             <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 d-flex justify-content-center">
                         <button type="submit">Отправить</button>
                     </div>
 
@@ -245,6 +258,41 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 d-flex align-items-center">
+                    <div class="footer-logo">
+                        Мегаполис<br/>
+                        <span>Живи как дома</span>
+                    </div>
+                    <div class="footer-menu d-none d-md-flex">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Преимущества</a></li>
+                            <li><a href="#">Правила проживания</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    </div>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="#" ><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#" ><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+                            <li><a href="#" ><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-phone">
+                        <ul>
+                            <li><img src="img/Layer08.png" alt=""><a href="tel:0933495478">(093)&nbsp;349&nbsp;54&nbsp;78</a></li>
+                            <li><a href="tel:0933495478">(093)&nbsp;349&nbsp;54&nbsp;78</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="top_button" title="Наверх"><i class="fa fa-angle-up"></i></div>
+    </footer>
 </body>
 
 </html>

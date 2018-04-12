@@ -704,6 +704,18 @@ input:focus:-ms-input-placeholder      {line-height: 100px; transition: line-hei
 	    font-size: 14px;
 	    font-weight: 400;
 	}
+footer .footer-menu ul{
+    list-style-type: none;
+}
+footer .footer-menu li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #dbdbdb;
+}
+footer .footer-menu li:hover a{
+    color: #69b246;
+}
 
 	.top_button {
 	    position: fixed;

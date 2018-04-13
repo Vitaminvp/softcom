@@ -213,6 +213,7 @@
 	    border-radius: 31px;
 	    position: relative;
 	    transition: all 0.3s ease;
+        z-index: 10;
 	}
 
 	.header-text .order:hover {
@@ -593,22 +594,22 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 	}
 
 	input:focus::-webkit-input-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: text-indent 0.3s ease;
 	}
 
 	input:focus::-moz-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: text-indent 0.3s ease;
 	}
 
 	input:focus:-moz-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: text-indent 0.3s ease;
 	}
 
 	input:focus:-ms-input-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: text-indent 0.3s ease;
 	}
 
@@ -633,19 +634,19 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 	}
 
 	textarea:focus::-webkit-input-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: all 0.3s ease;
 	    opacity: 0;
 	}
 
 	textarea:focus::-moz-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: all 0.3s ease;
 	    opacity: 0;
 	}
 
 	textarea:focus:-moz-placeholder {
-	    text-indent: 500px;
+	    text-indent: 1500px;
 	    transition: all 0.3s ease;
 	    opacity: 0;
 	}
@@ -876,7 +877,9 @@ input:focus:-ms-input-placeholder      {line-height: 100px; transition: line-hei
     .slick-dots li+li{
         margin-left: 10px; 
 	}
-
+    .slick-slide{
+        outline: none;
+    }
 
     .top-menu.toTop {
         position: fixed;
@@ -899,15 +902,103 @@ input:focus:-ms-input-placeholder      {line-height: 100px; transition: line-hei
 
 
 
-/*
-    .top-menu.toTop a {
-        color: #fff;
-    }
-*/
+.mymodal{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: 999;
+	background-color: rgba(0,0,0, 0.8);
+/*	display: none;*/
+    z-index: 999;
+}
+.times{
+	position: absolute;
+	top: -5vmax;
+	right: -3vmax;
+	color: #fff;
+	cursor: pointer;
+	font-size: 5vmax;
+	transition: .2s ease;
+}
+.times:hover{
+	color: #69b246;
+}
+.mymodal-content{
+	position: absolute;
+	width: 50vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1000;
+}
+.hide{
+	display: none;
+}
 
 
+textarea {
+	background-color: #eee;
+	height: 21.6vh;
+	width: 100%;
+	resize: none;
+	text-align: center;
+	font-size: 1.1vw;
+	font-weight: 500;
+	line-height: 4.1vw;
+/*	text-transform: uppercase;*/
+	border: none;
+	outline: none;
+}
+
+input {
+	width: 100%;
+}
+
+.form-control {
+	width: 100%;
+	color: #393939;
+	font-size: 1.1vmax;
+	line-height: 4.1vmax;
+	height: 4.1vmax;
+/*	text-transform: uppercase;*/
+	text-decoration:none;
+	text-align: center;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	margin-bottom: 1.3vh;
+	background-color: #eeeeee;
+    border-radius: 50px;
+}
+
+.form-control::placeholder {
+	color: #363636;
+}
+
+.btn {
+	display: block;
+	font-size: 1.1vmax;
+	line-height: 4.1vmax;
+	text-transform: uppercase;
+	background-color: #69b246;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	font-weight: 500;
+	border: none;
+	outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+}
 
 
+.btn:hover {
+	background: #4d8034;
+}
 
 
 

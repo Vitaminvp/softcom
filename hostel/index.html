@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/slick.css">
-    
+
     <link rel="stylesheet" href="css/style.css">
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/slick.js"></script>
-        <script src="js/script.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                     <div class="header-text">
                         <h1>Мегаполис&nbsp;<span class="t">-</span><br /> <span>твой комфорт в большом городе</span></h1>
 
-                        <a href="#" class="order">Забронировать</a>
+                        <a href="#" class="order" id="order">Забронировать</a>
                     </div>
                     <div class="header-img 	d-none d-lg-block">
                         <img src="img/flat.png" alt="" class="img-fluid">
@@ -62,63 +62,63 @@
 
     </header>
     <section class="comf">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
                     <h2 id="1">В наших хостелах комфортно!</h2>
-               </div>
-           </div>
-           <div class="row">
-               <div class="col-lg-12 d-flex justify-content-around items ">
-                   <div class="item">
-                       <img src="img/24-hours.png" alt="">Работаем 24/7
-                   </div>
-                   <div class="item">
-                       <img src="img/iron.png" alt="">Утюг
-                   </div>
-                   <div class="item">
-                       <img src="img/credit-card.png" alt="">Оплата картой
-                   </div>
-                   <div class="item">
-                       <img src="img/wifi.png" alt="">Wi-Fi
-                   </div>
-                   <div class="item">
-                       <img src="img/chat.png" alt="">Англоязычный персонал
-                   </div>
-                   <div class="item">
-                       <img src="img/strongbox.png" alt="">Сейф
-                   </div>
-                   <div class="item">
-                       <img src="img/wash-on-hot-water.png" alt="">Горячая вода
-                   </div>
-                   <div class="item">
-                       <img src="img/clean.png" alt="">Чистота и порядок
-                   </div>
-                   <div class="item">
-                       <img src="img/heater.png" alt="">Кондиционеры
-                   </div>
-                   <div class="item">
-                       <img src="img/mattress.png" alt="">Ортопедические матрасы
-                   </div>
-                   <div class="item">
-                       <img src="img/air-conditioning.png" alt="">Кондиционеры
-                   </div>
-                   <div class="item">
-                       <img src="img/tea.png" alt="">Кофе и чай
-                   </div>
-                   <div class="item">
-                       <img src="img/heater.png" alt="">Тепло
-                   </div>
-                   <div class="item">
-                       <img src="img/washing-machine.png" alt="">Прачечная
-                   </div>
-                   <div class="item">
-                       <img src="img/washing-machine.png" alt="">Прачечная
-                   </div>
-               </div>
-           </div>
-       </div>
-       <div class="et_pb_bottom_inside_divider"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-around items ">
+                    <div class="item">
+                        <img src="img/24-hours.png" alt="">Работаем 24/7
+                    </div>
+                    <div class="item">
+                        <img src="img/iron.png" alt="">Утюг
+                    </div>
+                    <div class="item">
+                        <img src="img/credit-card.png" alt="">Оплата картой
+                    </div>
+                    <div class="item">
+                        <img src="img/wifi.png" alt="">Wi-Fi
+                    </div>
+                    <div class="item">
+                        <img src="img/chat.png" alt="">Англоязычный персонал
+                    </div>
+                    <div class="item">
+                        <img src="img/strongbox.png" alt="">Сейф
+                    </div>
+                    <div class="item">
+                        <img src="img/wash-on-hot-water.png" alt="">Горячая вода
+                    </div>
+                    <div class="item">
+                        <img src="img/clean.png" alt="">Чистота и порядок
+                    </div>
+                    <div class="item">
+                        <img src="img/heater.png" alt="">Кондиционеры
+                    </div>
+                    <div class="item">
+                        <img src="img/mattress.png" alt="">Ортопедические матрасы
+                    </div>
+                    <div class="item">
+                        <img src="img/air-conditioning.png" alt="">Кондиционеры
+                    </div>
+                    <div class="item">
+                        <img src="img/tea.png" alt="">Кофе и чай
+                    </div>
+                    <div class="item">
+                        <img src="img/heater.png" alt="">Тепло
+                    </div>
+                    <div class="item">
+                        <img src="img/washing-machine.png" alt="">Прачечная
+                    </div>
+                    <div class="item">
+                        <img src="img/washing-machine.png" alt="">Прачечная
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="et_pb_bottom_inside_divider"></div>
     </section>
     <section class="address">
         <div class="container">
@@ -132,7 +132,8 @@
                     <div class="addr-box">
                         <div class="addr-img"><img src="img/1.jpg" alt=""></div>
                         <div class="addr-text">
-                            <h3>Хостел беличи</h3> <div class="price">От <span>100</span> грн</div>
+                            <h3>Хостел беличи</h3>
+                            <div class="price">От <span>100</span> грн</div>
                         </div>
                         <div class="addr-map">
                             <p><i class="fa fa-map-marker"></i>Житомирская</p> <a href="show">Показать на карте</a>
@@ -146,7 +147,8 @@
                     <div class="addr-box">
                         <div class="addr-img"><img src="img/2.jpg" alt=""></div>
                         <div class="addr-text">
-                            <h3>Хостел беличи</h3> <div class="price">От <span>100</span> грн</div>
+                            <h3>Хостел беличи</h3>
+                            <div class="price">От <span>100</span> грн</div>
                         </div>
                         <div class="addr-map">
                             <p><i class="fa fa-map-marker"></i>Житомирская</p> <a href="show">Показать на карте</a>
@@ -160,18 +162,18 @@
                     <div class="addr-box">
                         <div class="addr-img"><img src="img/3.jpg" alt=""></div>
                         <div class="addr-text">
-                           <div class="addr-text_addr">
-                            <h3>Хостел беличи</h3> 
-                              <p> <i class="fa fa-map-marker"></i>Житомирская</p>
-                           </div>
+                            <div class="addr-text_addr">
+                                <h3>Хостел беличи</h3>
+                                <p> <i class="fa fa-map-marker"></i>Житомирская</p>
+                            </div>
                             <div class="price">
                                 <ul>
                                     <li>сутки: <span>120</span> грн</li>
                                     <li>неделя: <span>450</span> грн</li>
                                     <li>месяц: <span>1500</span> грн</li>
                                 </ul>
-                            
-                          
+
+
                             </div>
                         </div>
                         <div class="addr-map">
@@ -186,14 +188,14 @@
         </div>
     </section>
     <section class="comments">
-    <div class="et_pb_top_inside_divider2"></div>
+        <div class="et_pb_top_inside_divider2"></div>
         <div class="container minus">
             <div class="row">
                 <div class="col-lg-12">
                     <h2 id="2">Отзывы</h2>
                 </div>
             </div>
- 
+
             <div class="row slick">
                 <div class="col-lg-4">
                     <div class="com">
@@ -245,13 +247,13 @@
     </section>
     <section class="feedback">
         <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <h2 class="invert" >Обратная связь</h2>
-                  </div>
-              </div>
-               <forma class="form">
             <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="invert">Обратная связь</h2>
+                </div>
+            </div>
+            <forma class="form">
+                <div class="row">
                     <div class="col-lg-6 flex-column d-flex align-items-lg-end">
                         <input type="text" required placeholder="Имя">
                         <input type="email" required placeholder="Email">
@@ -260,14 +262,14 @@
                     <div class="col-lg-6 d-flex justify-content-lg-start">
                         <textarea name="textarea" id="" required placeholder="Сообщение"></textarea>
                     </div>
-            </div>
-            <div class="row">
+                </div>
+                <div class="row">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <button type="submit">Отправить</button>
                     </div>
 
-            </div>
-               </forma>
+                </div>
+            </forma>
         </div>
     </section>
     <section class="about">
@@ -279,7 +281,7 @@
                 <div class="col-lg-8">
                     <h4>Значимость этих проблем настолько очевидна</h4>
                     <p>Что сложившаяся структура организации позволяет оценить значение соответствующий условий активизации. Не следует, однако забывать, что укрепление и развитие структуры играет важную роль в формировании существенных финансовых и административных условий.</p>
-                    <p><strong>Разнообразный и богатый опыт</strong> рамки и место обучения кадров играет важную роль в формировании новых предложений. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий обеспечивает <strong>широкому кругу</strong> (специалистов) участие в формировании новых предложений. С другой стороны начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Равным образом укрепление и развитие структуры играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что постоянное информационно  пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
+                    <p><strong>Разнообразный и богатый опыт</strong> рамки и место обучения кадров играет важную роль в формировании новых предложений. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий обеспечивает <strong>широкому кругу</strong> (специалистов) участие в формировании новых предложений. С другой стороны начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Равным образом укрепление и развитие структуры играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что постоянное информационно пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
                 </div>
             </div>
         </div>
@@ -293,19 +295,19 @@
                         <span>Живи как дома</span>
                     </div>
                     <div class="footer-menu d-none d-md-flex">
-                    <nav>
-                        <ul>
-                            <li><a href="#1">Преимущества</a></li>
-                            <li><a href="#2">Правила проживания</a></li>
-                            <li><a href="#3">Контакты</a></li>
-                        </ul>
-                    </nav>
+                        <nav>
+                            <ul>
+                                <li><a href="#1">Преимущества</a></li>
+                                <li><a href="#2">Правила проживания</a></li>
+                                <li><a href="#3">Контакты</a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="footer-social">
                         <ul>
-                            <li><a href="#" ><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#" ><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
-                            <li><a href="#" ><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                     <div class="footer-phone">
@@ -317,8 +319,19 @@
                 </div>
             </div>
         </div>
-            <div class="top_button" title="Наверх"><i class="fa fa-angle-up"></i></div>
+        <div class="top_button" title="Наверх"><i class="fa fa-angle-up"></i></div>
     </footer>
+    <div class="mymodal hide">
+        <div class="mymodal-content">
+            <div class="times">&times;</div>
+            <form action="#">
+                <input type="text" placeholder="Name" class="form-control">
+                <input type="phone" placeholder="Phone" class="form-control">
+                <input type="mail" placeholder="Email" class="form-control">
+                <button type="submit" ac class="btn">Отослать</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

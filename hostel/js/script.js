@@ -1,11 +1,5 @@
 $(function(){
         
-	$('a[href^="#"]').click(function(){
-		let target = $(this).attr("href");
-		$('html, body').animate({
-			scrollTop: $(target).offset().top
-		}, 800);
-	});
     $(window).on("load", function () {
                 $(window).scroll(function () {
                     $(this).scrollTop() > $(this).height() ? $(".top_button").addClass("active") : $(".top_button").removeClass("active");
@@ -59,4 +53,39 @@ $(function(){
                 });
             }
 	});
+    
+    
+    
+    
+    
+    
+    
+    $('.mymodal').hide().removeClass("hide");
+	$('#order').click(function(e){
+		e.preventDefault();
+		$('.mymodal').fadeIn(200);
+	});
+	$('.mymodal, .times').click(function(e){
+		e.preventDefault();
+		if ($(e.target).hasClass('mymodal') || $(e.target).hasClass('times')){
+				$('.mymodal').fadeOut(200);
+		}
+		e.stopPropagation();
+	});
+    
+    
+    
+    
+	$('a[href^="#"]').click(function(){
+		let target = $(this).attr("href");
+		$('html, body').animate({
+			scrollTop: $(target).offset().top
+		}, 800);
+	});
+    
+    
+    
+    
+    
+    
 })

@@ -168,7 +168,7 @@
 	.header-content {
 	    justify-content: center;
 	    align-items: center;
-/*	    z-index: 20;*/
+	    /*	    z-index: 20;*/
 	}
 
 	.header-text {
@@ -287,7 +287,7 @@
     border-bottom-left-radius: 40% 20%;
     border-bottom-right-radius: 90% 20%;
 */
-/*	    z-index: -1;*/
+	    /*	    z-index: -1;*/
 	    position: relative;
 	    background-color: white;
 	}
@@ -330,6 +330,12 @@
 	    color: #69b246;
 	    font-weight: 300;
 	    font-size: 18px;
+	}
+
+	.address .price ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
 	}
 
 	.address .price span {
@@ -704,18 +710,81 @@ input:focus:-ms-input-placeholder      {line-height: 100px; transition: line-hei
 	    font-size: 14px;
 	    font-weight: 400;
 	}
-footer .footer-menu ul{
-    list-style-type: none;
-}
-footer .footer-menu li a{
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 400;
-    color: #dbdbdb;
-}
-footer .footer-menu li:hover a{
-    color: #69b246;
-}
+
+	footer .footer-menu ul {
+	    list-style-type: none;
+	}
+
+	footer .footer-menu li a {
+	    text-decoration: none;
+	    font-size: 16px;
+	    font-weight: 400;
+	    color: #dbdbdb;
+	}
+
+	footer .footer-menu li:hover a {
+	    color: #69b246;
+	}
+
+	footer .footer-social ul {
+	    display: flex;
+	    list-style-type: none;
+
+
+	}
+
+	footer .footer-social li + li {
+	    margin-left: 15px;
+	}
+
+	footer .footer-social li {
+	    width: 45px;
+	    height: 45px;
+	    background-color: rgba(0, 0, 0, .2);
+	    border-radius: 50%;
+	    text-align: center;
+	    transition: all .2s ease;
+	    cursor: pointer;
+	}
+
+	footer .footer-social a {
+	    color: #fff;
+	    font-size: 21px;
+	    line-height: 45px;
+
+	}
+
+	footer .footer-social li:hover {
+	    background-color: #69b246;
+
+	}
+
+	footer .footer-phone ul {
+	    list-style-type: none;
+	}
+
+	footer .footer-phone ul li {
+	    text-align: right;
+	}
+
+	footer .footer-phone ul li img {
+	    margin-right: 10px;
+	    position: relative;
+	    top: 10px;
+	}
+
+	footer .footer-phone a {
+	    color: #fff;
+	    text-decoration: none;
+	    transition: all 0.2s ease;
+
+	}
+
+	footer .footer-phone a:hover {
+	    color: #69b246;
+	    text-decoration: underline;
+
+	}
 
 	.top_button {
 	    position: fixed;
@@ -744,25 +813,27 @@ footer .footer-menu li:hover a{
 
 	.top_button:hover {
 	    opacity: 1;
-	    background-color: #69b246;
+	    background-color: #0092ff;
 	    color: #fff
 	}
-.top_menu{
-    position: relative;
-}
+
+	.top_menu {
+	    position: relative;
+	}
+
 	.togglemenu {
 	    display: none;
 	    width: 50px;
 	    color: white;
 	    border: none;
 	    background-color: transparent;
-        cursor: pointer;
-        outline: none;
-
-
+	    cursor: pointer;
+	    outline: none;
+        transition: all .5s ease;
 	}
 
 	.togglemenu span {
+        transition: all .5s ease;
 	    display: block;
 	    background: #fff;
 	    height: 3px;
@@ -770,44 +841,115 @@ footer .footer-menu li:hover a{
 	    border-radius: 5px;
 
 	}
-    button.active span {
+
+	button.active span {
+	    background-color: #74b753;
+        border: 1px solid rgba(255,255,255, 0.3)
+	}
+
+    .slick-dots{
+	    list-style-type: none;
+        text-align: center;
+	}
+    .slick-dots li{
+        display: inline-block;
+        border-radius: 50%;
+        box-shadow: 0 0 15.1px 2.9px rgba(151, 184, 185, 0.14);
+        outline: none;
+	}
+    .slick-dots li button{
+        outline: none;
+        background-color: #fff;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: none;
+        border-radius: 50%;
+        text-indent: 9000px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.2s ease;
+	}
+    .slick-dots li.slick-active button{
+        background-color: #0092ff;
+	}
+    .slick-dots li+li{
+        margin-left: 10px; 
+	}
+
+
+    .top-menu.toTop {
+        position: fixed;
+        top: 0;
+        left: 0;
         background-color: #74b753;
+        opacity: 0.75;
+        width: 100%;
+        transition: 0.2s ease;
+        z-index: 100;
     }
+
+    .top-menu.toTop .top{
+        margin-top: 0;
+    }
+
+    .toTop:hover {
+        opacity: 1;
+    }
+
+
+
+/*
+    .top-menu.toTop a {
+        color: #fff;
+    }
+*/
+
+
+
+
+
+
+
+
+
+
 
 	@media (max-width: 1200px) {
 	    .top li + li {
 	        margin-left: 20px;
 	    }
 	}
-    @media (min-width: 993px) {
 
-        .top_menu ul{
-            display: flex !important;
-        }
-    }
+	@media (min-width: 993px) {
+
+	    .top_menu ul {
+	        display: flex !important;
+	    }
+	}
 
 	@media (max-width: 992px) {
-	    .top_menu ul{
+	    .top_menu ul {
 	        display: none;
-            position: absolute;
-            background-color: #74b753;
-            padding: 20px;
-            border-radius: 5px;
-            top: 20px;
-            z-index: 999;
+	        position: absolute;
+	        background-color: #74b753;
+	        padding: 20px;
+	        border-radius: 5px;
+	        top: 20px;
+	        z-index: 999;
 	    }
-        .header-text {
-            margin-right: 0;
-        }
+	    .header-text {
+	        margin-right: 0;
+	    }
 	    .top li + li {
 	        margin-left: 10px;
 	    }
-        .top_menu ul li{
+	    .top_menu ul li {
 	        margin-left: 0;
 	    }
-        .togglemenu {
-            display: inline-block;
-        }
+	    .togglemenu {
+	        display: inline-block;
+	    }
 	    .address .addr-box {
 	        height: auto;
 	    }
@@ -822,9 +964,9 @@ footer .footer-menu li:hover a{
 	        padding-right: 0;
 	        margin-right: -10px;
 	    }
-        .contacts ul{
-            padding-left: 0;
-        }
+	    .contacts ul {
+	        padding-left: 0;
+	    }
 	}
 
 	@media (max-width: 768px) {
@@ -837,6 +979,16 @@ footer .footer-menu li:hover a{
 
 	}
 
+	@media (max-width: 576px) {
+	    footer ul {
+	        padding-left: 0;
+	    }
+	    .footer-logo {
+	        margin-top: 16px;
+	    }
+
+	}
+
 	@media (max-width: 425px) {
 	    .header-text h1 {
 	        font-size: 52px;
@@ -844,13 +996,13 @@ footer .footer-menu li:hover a{
 	    .header-text h1 span {
 	        font-size: 19px;
 	    }
-        .header-text h1 span.t {
-            font-size: 63px;
-        }
-        h2{
-            font-size: 26px;
-        }
-        .address {
-            padding: 100px 0 200px;
-        }
+	    .header-text h1 span.t {
+	        font-size: 63px;
+	    }
+	    h2 {
+	        font-size: 26px;
+	    }
+	    .address {
+	        padding: 100px 0 200px;
+	    }
 	}

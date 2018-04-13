@@ -1,5 +1,11 @@
 $(function(){
-
+        
+	$('a[href^="#"]').click(function(){
+		let target = $(this).attr("href");
+		$('html, body').animate({
+			scrollTop: $(target).offset().top
+		}, 800);
+	});
     $(window).on("load", function () {
                 $(window).scroll(function () {
                     $(this).scrollTop() > $(this).height() ? $(".top_button").addClass("active") : $(".top_button").removeClass("active");
@@ -14,5 +20,43 @@ $(function(){
             $(this).toggleClass('active'); 
             $('.top_menu ul').slideToggle(400);
         });
-    
+        $('.slick').slick({
+          arrows: false,
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 3,
+            responsive: [
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	  ]
+        });
+    	$(window).scroll(function(){
+        
+            if(window.innerWidth > 768){
+                let top = $('.top-menu').offset().top;
+                $(window).scroll(function(){
+                    if( $(window).scrollTop() > top) {
+                        $('.top-menu').addClass('toTop');
+                    }else{
+                        $('.top-menu').removeClass('toTop');
+                    }
+                });
+            }
+	});
 })

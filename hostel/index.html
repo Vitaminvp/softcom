@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/slick.css">
+    
     <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/slick.js"></script>
         <script src="js/script.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="container-flex">
+        <div class="container-flex top-menu">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-around align-items-center top flex-column flex-md-row order-1">
                     <div class="logo"><img src="img/logo_w_mo-01.svg" alt="Logo"></div>
@@ -27,9 +30,9 @@
                            <span></span>
                         </button>
                         <ul>
-                            <li><a href="#">Преимущества</a></li>
-                            <li><a href="#">Правила проживания</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#1">Преимущества</a></li>
+                            <li><a href="#2">Правила проживания</a></li>
+                            <li><a href="#3">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="contacts order-2">
@@ -62,7 +65,7 @@
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
-                    <h2>В наших хостелах комфортно!</h2>
+                    <h2 id="1">В наших хостелах комфортно!</h2>
                </div>
            </div>
            <div class="row">
@@ -157,10 +160,22 @@
                     <div class="addr-box">
                         <div class="addr-img"><img src="img/3.jpg" alt=""></div>
                         <div class="addr-text">
-                            <h3>Хостел беличи</h3> <div class="price">От <span>100</span> грн</div>
+                           <div class="addr-text_addr">
+                            <h3>Хостел беличи</h3> 
+                              <p> <i class="fa fa-map-marker"></i>Житомирская</p>
+                           </div>
+                            <div class="price">
+                                <ul>
+                                    <li>сутки: <span>120</span> грн</li>
+                                    <li>неделя: <span>450</span> грн</li>
+                                    <li>месяц: <span>1500</span> грн</li>
+                                </ul>
+                            
+                          
+                            </div>
                         </div>
                         <div class="addr-map">
-                            <p><i class="fa fa-map-marker"></i>Житомирская</p> <a href="show">Показать на карте</a>
+                            <p> <a href="show">Показать на карте</a> </p>
                         </div>
                         <div class="addr-order">
                             <a href="#" class="addr-order-link">Забронировать</a>
@@ -175,11 +190,11 @@
         <div class="container minus">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Отзывы</h2>
+                    <h2 id="2">Отзывы</h2>
                 </div>
             </div>
  
-            <div class="row">
+            <div class="row slick">
                 <div class="col-lg-4">
                     <div class="com">
                         <div class="com-head">
@@ -213,6 +228,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4">
+                    <div class="com">
+                        <div class="com-head">
+                            <div class="com-head-img"><img src="img/c.jpg" alt=""></div>
+                            <div class="com-head-title">Тарас, Гондурас</div>
+                        </div>
+                        <div class="com-text">
+                            <p>Во второй раз приезжаю сюда и опять приятно удивлён. Персонал был максимально вежлив и учтив. Выезжали из хостела на час позже и никто не подгонял. Соседи по хостелу были тихие и спокойные. Бывают хостелы прямо общаги какие-то, все шумят и болтают, а здесь как в гостинице. Есть шкафчик на замке, холодильник и бесплатный кофе с чаем ☕️ В хостеле светло, чисто и приятно. Цена определённо соответствует ожиданиям</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -221,7 +247,7 @@
         <div class="container">
               <div class="row">
                   <div class="col-lg-12">
-                      <h2 class="invert">Обратная связь</h2>
+                      <h2 class="invert" >Обратная связь</h2>
                   </div>
               </div>
                <forma class="form">
@@ -248,7 +274,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-                    <h2>О нас</h2>
+                    <h2 id="3">О нас</h2>
                 </div>
                 <div class="col-lg-8">
                     <h4>Значимость этих проблем настолько очевидна</h4>
@@ -261,7 +287,7 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 d-flex align-items-center">
+                <div class="col-lg-12 d-flex align-items-center justify-content-around flex-column-reverse flex-sm-row">
                     <div class="footer-logo">
                         Мегаполис<br/>
                         <span>Живи как дома</span>
@@ -269,9 +295,9 @@
                     <div class="footer-menu d-none d-md-flex">
                     <nav>
                         <ul>
-                            <li><a href="#">Преимущества</a></li>
-                            <li><a href="#">Правила проживания</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#1">Преимущества</a></li>
+                            <li><a href="#2">Правила проживания</a></li>
+                            <li><a href="#3">Контакты</a></li>
                         </ul>
                     </nav>
                     </div>

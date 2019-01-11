@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <title>FC</title>
+</head>
+
+<style>
+    .fc {
+        color: #333131;
+        font-weight: 400;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 18px;
+    }
+
+    .fc .BoldRed {
+        color: #d50038;
+        font-weight: 700;
+    }
+
+    .fc .head-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .fc .h2 {
+        font-weight: 400;
+        text-align: center;
+        font-size: 55px;
+        margin: 40px 0;
+    }
+
+    .fc .h3 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .fc .h3p {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .fc .bggray {
+        background-color: #f1f1f1;
+        padding: 10px 10px 20px;
+    }
+
+    .fc .bgwhite {
+        background-color: #fff;
+        box-shadow: 0 7px 9.4px 0.6px rgba(134, 25, 25, 0.05);
+        width: 100%;
+        margin-bottom: 0.4em;
+        padding: 5px;
+    }
+
+    .fc .lightgray {
+        color: #403f3c;
+        font-weight: 700;
+    }
+
+    .fc .program {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 1rem;
+    }
+
+    .fc .program::before {
+        content: '';
+        background-image: url(label.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 99%;
+        top: 95%;
+        width: 40px;
+        height: 50px;
+        z-index: 1;
+    }
+
+    .fc .p0 {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .fc .borderXwhite {
+        margin: 15px auto 0;
+        border: 2px solid white;
+        box-shadow: 0 7px 9.4px 0.6px rgba(134, 25, 25, 0.05);
+    }
+
+    .fc .tbl {
+        border-bottom: 2px solid #e5e5e5;
+        border-top: 2px solid #e5e5e5;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        position: relative;
+    }
+
+    .fc .hart {
+        margin-top: 20px;
+        margin-left: 70px;
+        padding-left: 60px;
+        position: relative;
+    }
+
+    .fc .hart:before {
+        content: '';
+        background-image: url(hart.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 0%;
+        top: -30%;
+        width: 140px;
+        height: 150px;
+        z-index: 1;
+    }
+
+    .fc .tbl::before {
+        content: '1';
+        position: absolute;
+        right: 103%;
+        top: -55px;
+        width: 26px;
+        height: 64px;
+        color: #f1f1f1;
+        font-size: 90px;
+        font-weight: 700;
+    }
+
+    .fc .tbl2::before {
+        content: '2';
+    }
+
+    .fc .tbl3::before {
+        content: '3';
+    }
+
+    .fc .tbl4::before {
+        content: '4';
+    }
+
+    .fc .tbl5::before {
+        content: '5';
+    }
+
+    .fc .price,
+    .fc .priceCross {
+        font-size: 26px;
+        position: relative;
+    }
+
+    .fc .priceCross {
+        font-weight: 400;
+    }
+
+    .fc .priceCross:before {
+        content: "";
+        width: 70px;
+        height: 2px;
+        top: 57%;
+        left: 50%;
+
+        transform: rotate(5deg) translate(-50%, -50%);
+        position: absolute;
+        background-color: #d50038;
+    }
+</style>
+
+<body>
+    <div class="container-fluid fc">
+        <div class="row">
+            <div class="col-12">
+                <img src="head-logo.jpg" alt="" class="img-fluid head-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="h2">Для наших клієнтів <span class="BoldRed">ЛІГА:ЗАКОН:</span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fc">
+        <div class="row tbl">
+            <div class="col-md-6 py-4 d-flex justify-content-center flex-column">
+                <h3 class="h3">-50% на те, щоб ви автоматизували свій облік</h3>
+                <p class="h3p">Знижка надається на всі <strong>програми базової версії</strong></p>
+            </div>
+            <div class="col-md-6 bggray">
+                <div class="row ml-5 mr-5">
+                    <div class="col-12 borderXwhite">
+                        <p class="program text-center">Вигідна ціна на придбання<br /> 1С:Підприємство 8. Базова версія </p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center bgwhite">Вартість для клієнтів СОФТКОМ, грн</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center bgwhite">Стандартна вартість, грн</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center BoldRed price bgwhite">1120</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center BoldRed priceCross bgwhite">2240</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row tbl tbl2">
+            <div class="col-md-6  py-4 d-flex justify-content-center flex-column">
+                <h3 class="h3">-50% на те, щоб ви швидко й без помилок почали працювати в 1С:Підприємство 8.</h3>
+                <p class="h3p">Для вас діють унікальні послуги впровадження
+                    <br> <strong>1С:Підприємство 8 СУПЕРСТАРТ або СУПЕРСТАРТ lite</strong>
+                </p>
+            </div>
+            <div class="col-md-6 bggray">
+                <div class="row ml-5 mr-5">
+                    <div class="col-12 borderXwhite">
+                        <p class="program text-center">Вигідна ціна на впровадження <br />1С:Підприємство 8</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center bgwhite">Вартість для клієнтів СОФТКОМ, грн</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center bgwhite">Стандартна вартість, грн</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center lightgray bgwhite">СУПЕРСТАРТ</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center lightgray bgwhite">СУПЕРСТАРТ</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center BoldRed price bgwhite">10 000</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center BoldRed priceCross bgwhite">20 000</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center lightgray bgwhite">СУПЕРСТАРТ lite</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center lightgray bgwhite">СУПЕРСТАРТ lite</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center BoldRed price bgwhite">10 000</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center BoldRed priceCross bgwhite">20 000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tbl tbl3">
+            <div class="col-md-6 py-4 d-flex justify-content-center flex-column">
+                <h3 class="h3">-50% на супровід програми 1С:Підприємство 8 </h3>
+                <p class="h3p">Знижка надається на <strong>тарифний пакет Оптима</strong> строком на <strong>3 місяці</strong></p>
+            </div>
+            <div class="col-md-6 bggray">
+                <div class="row ml-5 mr-5">
+                    <div class="col-12 borderXwhite">
+                        <p class="program text-center">Вигідна ціна на придбання<br />Вигідна ціна на придбання тарифного пакету Оптима строком на 3 місяці</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center bgwhite">Вартість для клієнтів СОФТКОМ, грн</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center bgwhite">Стандартна вартість, грн</p>
+                    </div>
+                    <div class="col-6 p0 pr-1">
+                        <p class="text-center BoldRed price bgwhite">2970</p>
+                    </div>
+                    <div class="col-6 p0 pl-1">
+                        <p class="text-center BoldRed priceCross bgwhite">5940</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row tbl tbl4">
+            <div class="col-md-6 py-4 d-flex justify-content-center flex-column">
+                <h3 class="h3">-50% на доопрацювання вашої 1С:Підприємство 8</h3>
+                <p class="h3p">Ви маєте знижку на вартість <strong>5 годин</strong> для <strong>проведення робіт по 1С:Підприємство 8</strong></p>
+                <p class="h3p">Роботи можуть проводитися віддалено або в вашому офісі</p>
+            </div>
+            <div class="col-md-6 bggray">
+                <div class="row ml-5 mr-5">
+                    <div class="col-12 borderXwhite">
+                        <p class="program text-center">Знижка надається від вартості 5 годин, згідно обраного тарифного плану</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tbl tbl5">
+            <div class="col-md-6 py-4 d-flex justify-content-center flex-column">
+                <h3 class="h3">-50% на те, щоб ви могли самостійно розібратися в програмі</h3>
+                <p class="h3p">Для вас будь-який курс в
+                    <strong>Центрі сертифікованого навчання СОФТКОМ</strong> </p>
+                <p class="h3p">Наявні курси та їх графік освітлені на сайті: <br>
+                    <strong><a href="https://www.softcom.ua/ua/1c/learn/graphic.php">https://www.softcom.ua/ua/1c/learn/graphic.php</a></strong>
+                </p>
+            </div>
+            <div class="col-md-6 bggray">
+                <div class="row ml-5 mr-5">
+                    <div class="col-12 borderXwhite">
+                        <p class="program text-center">Знижка надається на будь-який курс в Центрі сертифікованого навчання СОФТКОМ
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col py-4 text-center d-flex justify-content-center">
+                <div class="hart d-flex justify-content-center flex-column">
+                    <p class="h3p">Скористайтеся ВСІМА знижками!</p>
+                    <p class="h3p">Вам не потрібно обирати, Вони всі ваші!</p>
+                </div>
+
+            </div>
+            <!--
+            <div class="col-md-6 text-right">
+                <img src="logo.png" alt="">
+                <p><a href="tel:+380445013700">Тел.: (044) 501-3-700</a></p>
+                <p><a href="https://www.softcom.ua/ru/liga/">https://www.softcom.ua/ru/liga/</a></p>
+            </div>
+-->
+        </div>
+    </div>
+</body>
+
+</html>

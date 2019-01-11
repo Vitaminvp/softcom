@@ -1,0 +1,108 @@
+.mass_list {
+    list-style: none;
+    line-height: 1.3;
+}
+.mass_list li{
+    position: relative;
+    padding-left: 27px;
+}
+.mass_list li::before{
+    position: absolute;
+    color: orange;
+    font-weight: bold;
+    font-size: 24px;
+    content: "\273E";
+    background: transparent url("img_tree.png") no-repeat center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    top: -6px;
+    left: 0;
+    background-repeat: no-repeat;
+    
+}
+
+.mass_block{
+    background-color: cornsilk;
+    padding: 50px;
+    margin: 0;
+    border-radius: 20px;
+    border: 1px solid #fff6d1;
+    box-shadow: 1px 1px 2px 0px #adadad;
+}
+
+.mysale {
+	position: relative;
+	top: -15px;
+	left: 25%;
+    font-size:5em;
+    font:bold 2.5rem/1.1 'Signika', sans-serif;
+    user-select:none;
+	z-index: 100;
+}
+
+.mysale span { display:inline-block; animation:float .2s ease-in-out infinite; }
+
+ @keyframes float {
+  0%,100%{ transform:none; }
+  33%{ transform:translateY(-1px) rotate(-2deg); }
+  66%{ transform:translateY(1px) rotate(2deg); }
+}
+.mysale:hover span { animation:bounce .9s; }
+@keyframes bounce {
+  0%,100%{ transform:translate(0); }
+  25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+}
+
+.mysale span:nth-child(4n) { color:hsl(50, 75%, 55%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+.mysale span:nth-child(4n-1) { color:hsl(135, 35%, 55%); text-shadow:1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+.mysale span:nth-child(4n-2) { color:hsl(155, 35%, 60%); text-shadow:1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+.mysale span:nth-child(4n-3) { color:hsl(30, 65%, 60%); text-shadow:1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+
+.mysale span:nth-child(2){ animation-delay:.05s; }
+.mysale span:nth-child(3){ animation-delay:.1s; }
+.mysale span:nth-child(4){ animation-delay:.15s; }
+.mysale span:nth-child(5){ animation-delay:.2s; }
+.mysale span:nth-child(6){ animation-delay:.25s; }
+.mysale span:nth-child(7){ animation-delay:.3s; }
+.mysale span:nth-child(8){ animation-delay:.35s; }
+.mysale span:nth-child(9){ animation-delay:.4s; }
+.mysale span:nth-child(10){ animation-delay:.45s; }
+.mysale span:nth-child(11){ animation-delay:.5s; }
+.mysale span:nth-child(12){ animation-delay:.55s; }
+.mysale span:nth-child(13){ animation-delay:.6s; }
+.mysale span:nth-child(14){ animation-delay:.65s; }
+
+.mass_list-rules li::before{
+    content: "!";
+    font-size: 15px;
+    color: red;
+    
+}
+
+  	.hoverTable{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.hoverTable td{ 
+		padding:7px; border: #d1d1d1 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+		background: cornsilk;
+	}
+	/* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #ffff99;
+    }
+.d-flax{
+    display: flex;
+}
+.half-of-box{
+    width: 50%;
+    
+}
+.half-of-box img{
+    max-width: 350px;
+}

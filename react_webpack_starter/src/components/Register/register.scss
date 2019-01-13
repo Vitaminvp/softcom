@@ -7,7 +7,7 @@
   }
   &__form{
     input, select{
-      margin-top: 40px;
+
       width: 100%;
       border: 1px solid #b7b7b7;
       border-radius: 4px;
@@ -21,24 +21,31 @@
         border: solid 1px #3352a2;
       }
     }
-    select{
-      cursor: pointer;
+    &_select, &_input{
+      margin-top: 40px;
+    }
+    &_select{
       position: relative;
       display: inline-block;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
       &:before{
-        content: "***";
-        font-size: 22px;
+        font-family: 'icomoon';
+        content: "\e900";
+        font-size: 16px;
         position: absolute;
         color: black;
-        right: 8px;
-        top: 4px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 1;
         pointer-events: none;
         box-sizing: border-box;
       }
+    }
+    select{
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
 
     ::placeholder{

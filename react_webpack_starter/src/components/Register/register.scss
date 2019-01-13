@@ -1,0 +1,49 @@
+@import "../../style/variables";
+
+.register{
+  padding-top: 50px;
+  h4{
+    margin: 30px 0 60px;
+  }
+  &__form{
+    input, select{
+      margin-top: 40px;
+      width: 100%;
+      border: 1px solid #b7b7b7;
+      border-radius: 4px;
+      padding: 18px;
+      outline: none;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    select{
+      cursor: pointer;
+      position: relative;
+      &:after{
+        content: "eeeeeeee";
+        font-size: 12px;
+        position: absolute;
+        right: 8px;
+        top: 4px;
+        z-index: 1;
+        pointer-events: none;
+        box-sizing: border-box;
+      }
+    }
+
+    ::placeholder{
+      color: $link-color;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    &_label{
+      position: absolute;
+      color: $link-color;
+      font-size: 12px;
+      background-color: #fff;
+      padding: 3px;
+      top: 30px;
+      left: 30px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../style/variables";
+.users{
+  padding-bottom: 5%;
+  h2{
+    margin: 10% 0 3%;
+  }
+  h4{
+    margin-bottom: 80px;
+  }
+  .user{
+    display: flex;
+    &__img img{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    &__info{
+      margin-left: 10px;
+      font-size: 14px;
+      &_name{
+        margin: 30px 0 15px;
+        color: black;
+        font-family: Overpass;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      &_position{
+        margin: 5px 0;
+      }
+      &_email{
+        margin: 5px 0;
+      }
+
+    }
+  }
+  &__show_more{
+    text-align: center;
+    margin-top: 50px;
+  }
+}

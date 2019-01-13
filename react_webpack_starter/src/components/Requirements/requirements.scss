@@ -1,0 +1,21 @@
+@import "../../style/variables";
+.requirements{
+  background-image: url(../../assets/img/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5%;
+  h2{
+    color: white;
+    margin: 10% 0 3%;
+  }
+  &__img img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  p{
+    margin: 15px 0;
+    line-height: 1.3;
+    color: $text-light;
+  }
+}

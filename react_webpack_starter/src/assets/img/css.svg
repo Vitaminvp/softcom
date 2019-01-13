@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="114px" viewBox="0 0 100 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>css</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="css" fill-rule="nonzero">
+            <polygon id="Shape" fill="#264DE4" points="49.94 113.41 9.1 102.07 0 0 100 0 90.89 102.06"></polygon>
+            <polygon id="Shape" fill="#2965F1" points="83.09 95.56 90.88 8.35 50 8.35 50 104.73"></polygon>
+            <path d="M20.86,46.2 L22,58.72 L50,58.72 L50,46.2 L20.86,46.2 Z M18.61,20.87 L19.75,33.38 L50,33.38 L50,20.87 L18.61,20.87 Z M50,78.72 L36,75 L35.11,65 L22.54,65 L24.3,84.64 L49.94,91.76 L50,91.76 L50,78.72 Z" id="Shape" fill="#EBEBEB"></path>
+            <polygon id="Shape" fill="#FFFFFF" points="79.06 46.2 81.32 20.87 50 20.87 50 33.38 67.6 33.38 66.46 46.2 50 46.2 50 58.72 65.37 58.72 63.92 75 50 78.73 50 91.73 75.66 84.62 75.85 82.5 78.79 49.55 79.1 46.18"></polygon>
+        </g>
+    </g>
+</svg>

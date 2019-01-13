@@ -1,0 +1,58 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+.btn{
+  display: inline-block;
+  color: #fefefe;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2;
+  background-color: $accent;
+  padding: 0 125px;
+  border-radius: 4px;
+  text-decoration: none;
+  @include transition;
+  &:hover{
+    background-color: lighten( $accent, 10% );
+  }
+  &:active{
+    background-color: darken( $accent, 10% );
+  }
+  &__transparent{
+    color: $accent;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    &:hover{
+      color: lighten( $accent, 10% );
+      background-color: transparent;
+    }
+    &:active{
+      color: darken( $accent, 10% );
+      background-color: transparent;
+    }
+  }
+  &__border{
+    background-color: transparent;
+    color: $accent;
+    border: 2px solid $accent;
+    &:hover{
+      color: lighten( $accent, 10% );
+      background-color: transparent;
+    }
+    &:active{
+      color: darken( $accent, 10% );
+      background-color: transparent;
+    }
+  }
+}
+.btn-green{
+  background-color: $accent;
+  background-image:  radial-gradient(circle at 50% 0, #c1ff7f, $accent);
+  &:hover{
+    background-image: radial-gradient(circle at 50% 0, #c1ff7f,  #79c13a);
+  }
+  &:active{
+    background-image: radial-gradient(circle at 50% 0, #c1ff7f, #71af30);
+  }
+}

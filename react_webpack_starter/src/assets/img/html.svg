@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="114px" viewBox="0 0 100 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>html</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="html" fill-rule="nonzero">
+            <polygon id="Shape" fill="#E44D26" points="100 0 90.89 102.06 49.94 113.41 9.1 102.07 0 0"></polygon>
+            <polygon id="Shape" fill="#F16529" points="50 104.73 83.09 95.56 90.88 8.35 50 8.35"></polygon>
+            <path d="M32.29,33.38 L50,33.38 L50,20.87 L18.61,20.87 L18.91,24.22 L22,58.72 L50,58.72 L50,46.2 L33.43,46.2 L32.29,33.38 Z M35.11,65 L22.54,65 L24.3,84.64 L49.94,91.76 L50,91.76 L50,78.76 L36,75 L35.11,65 Z" id="Shape" fill="#EBEBEB"></path>
+            <path d="M50,58.72 L65.37,58.72 L63.92,75 L50,78.73 L50,91.73 L75.66,84.62 L75.85,82.5 L78.79,49.55 L79.1,46.18 L50,46.18 L50,58.72 Z M50,33.35 L80.2,33.35 L80.45,30.54 L81,24.22 L81.3,20.87 L50,20.87 L50,33.35 Z" id="Shape" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

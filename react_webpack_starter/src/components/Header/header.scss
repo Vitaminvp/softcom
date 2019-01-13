@@ -1,0 +1,25 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+.header {
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+  background-image: url(../../assets/img/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1{
+    padding-top: 20%;
+    color: white;
+    font-family: Overpass;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 4% 0;
+    letter-spacing: 1px;
+  }
+}

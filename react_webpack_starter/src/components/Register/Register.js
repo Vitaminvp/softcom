@@ -46,16 +46,19 @@ class Register extends React.Component {
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="register__form_select">
-                                <select>
-                                    <option value="" >Select your position</option>
-                                    <option value="Frontend developer">Frontend developer</option>
-                                    <option value="Backend developer">Backend developer</option>
-                                    <option value="Lead designer">Lead designer</option>
-                                    <option value="QA">QA</option>
-                                    <option value="The contextual advertising specialist">The contextual advertising specialist</option>
-                                    <option value="Leading specialist of the Control Department">Leading specialist of the Control Department</option>
-                                </select>
+                            <div className="register__form_upload">
+
+                                <input class="register__form_upload-input" />
+                                <div class="register__form_upload-div">
+                                    <span>Upload</span>
+                                    <input type="file" class="register__form_upload-div_input" />
+                                </div>
+
+
+                                {/*<label class="register__form_file">*/}
+                                    {/*<input type="file" aria-label="Upload your photo" placeholder="Upload your photo" />*/}
+                                        {/*<span class="register__form_file-select"></span>*/}
+                                {/*</label>*/}
                             </div>
                         </div>
                     </div>

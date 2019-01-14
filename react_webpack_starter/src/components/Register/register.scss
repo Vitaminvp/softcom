@@ -7,7 +7,6 @@
   }
   &__form{
     input, select{
-
       width: 100%;
       border: 1px solid #b7b7b7;
       border-radius: 4px;
@@ -21,10 +20,11 @@
         border: solid 1px #3352a2;
       }
     }
-    &_select, &_input{
+    &_select, &_input, &_upload{
       margin-top: 40px;
     }
     &_select{
+      width: 100%;
       position: relative;
       display: inline-block;
       &:before{
@@ -39,6 +39,39 @@
         z-index: 1;
         pointer-events: none;
         box-sizing: border-box;
+      }
+    }
+    &_upload{
+      position: relative;
+      display: flex;
+      &-input{
+        border-radius: 4px 0 0 4px!important;
+        border-right: 0!important;
+
+      }
+      &-div{
+        position: relative;
+        overflow: hidden;
+        border: 2px solid $accent;
+        border-radius: 0 4px 4px 0;
+        color: $accent;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 16px 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_input{
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          cursor: pointer;
+          opacity: 0;
+          filter: alpha(opacity=0);
+        }
       }
     }
     select{

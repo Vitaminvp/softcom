@@ -3,12 +3,23 @@ import './register.scss';
 import Btn from "../button/button";
 
 class Register extends React.Component {
+    constructor(){
+        super();
+    }
+
     render(){
+        const app = document.getElementById("app");
+        app.onchange = function (e) {
+            if(e.target.classList.contains('register__form_upload-div_input')){
+                const closestInput = document.querySelector('.register__form_upload-input');
+                closestInput.value = e.target.value.replace("C:\\fakepath\\", "");
+            }
+        };
         return <section className="register">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <h2>Register to get a work</h2>
+                        {/*<h2>Register to get a work</h2>*/}
                         <h4>Attention! After successful registration and alert, update the list of users in the block from the top</h4>
                     </div>
                 </div>
@@ -46,16 +57,12 @@ class Register extends React.Component {
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="register__form_select">
-                                <select>
-                                    <option value="" >Select your position</option>
-                                    <option value="Frontend developer">Frontend developer</option>
-                                    <option value="Backend developer">Backend developer</option>
-                                    <option value="Lead designer">Lead designer</option>
-                                    <option value="QA">QA</option>
-                                    <option value="The contextual advertising specialist">The contextual advertising specialist</option>
-                                    <option value="Leading specialist of the Control Department">Leading specialist of the Control Department</option>
-                                </select>
+                            <div className="register__form_upload">
+                                <input className="register__form_upload-input" placeholder="Upload your photo"/>
+                                <div className="register__form_upload-div">
+                                    <span>Upload</span>
+                                    <input type="file" className="register__form_upload-div_input" />
+                                </div>
                             </div>
                         </div>
                     </div>

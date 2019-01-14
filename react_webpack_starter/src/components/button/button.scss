@@ -45,6 +45,10 @@
       background-color: transparent;
     }
   }
+  &__submit{
+    background-color: #d7d7d7;
+    color: $link-color;
+  }
 }
 .btn-green{
   background-color: $accent;

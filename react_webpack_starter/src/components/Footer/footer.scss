@@ -1,0 +1,21 @@
+@import "../../style/variables";
+.footer{
+  background-color: #6265ad;
+  color: $bg-color;
+  .menu{
+    justify-content: flex-end;
+    &_link{
+      color: $bg-color;
+      &:hover{
+        color: darken($bg-color, 10%);
+      }
+    }
+  }
+  &__nav{
+    background-color: $footer-bg;
+    margin-bottom: 1px;
+  }
+  &__social{
+    background-color: $footer-bg;
+  }
+}

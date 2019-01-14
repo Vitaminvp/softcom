@@ -1,0 +1,15 @@
+@import "../../../style/variables";
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $top_nav_height;
+  & img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 134px;
+    min-width: 100px;
+
+  }
+}

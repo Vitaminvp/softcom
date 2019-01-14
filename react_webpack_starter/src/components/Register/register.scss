@@ -44,10 +44,9 @@
     &_upload{
       position: relative;
       display: flex;
-      &-input{
-        border-radius: 4px 0 0 4px!important;
-        border-right: 0!important;
-
+      .register__form_label{
+        background-color: transparent;
+        top: 100%;
       }
       &-div{
         position: relative;
@@ -73,6 +72,10 @@
           filter: alpha(opacity=0);
         }
       }
+      input.register__form_upload-input{
+        border-radius: 4px 0 0 4px;
+        border-right: 0;
+      }
     }
     select{
       cursor: pointer;
@@ -90,10 +93,15 @@
       position: absolute;
       color: $link-color;
       font-size: 12px;
-      background-color: #fff;
+      background-color: $bg-color;
       padding: 3px;
       top: 30px;
       left: 30px;
+    }
+    &_submit{
+      text-align: center;
+      margin: 60px 0 120px;
+
     }
   }
 }

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import logo from '../../assets/img/icons/logo.svg';
 import './topnav.scss';
 import AuthControl from "./AuthControl/AuthControl";
+import Logo from "./Logo/Logo";
+import Menu from "./Menu/Menu";
 
 class TopNav extends Component {
     render() {
@@ -9,18 +10,10 @@ class TopNav extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-2">
-                            <div className="topnav__logo">
-                                <img src={logo} alt="logo"/>
-                            </div>
+                            <Logo />
                         </div>
                         <div className="col-md-7">
-                            <ul className="topnav__menu">
-                                <li><a href="#" className="topnav__menu_link">About me</a></li>
-                                <li><a href="#" className="topnav__menu_link">Relationships</a></li>
-                                <li><a href="#" className="topnav__menu_link">Requirements</a></li>
-                                <li><a href="#" className="topnav__menu_link">Users</a></li>
-                                <li><a href="#" className="topnav__menu_link">Sign Up</a></li>
-                            </ul>
+                            <Menu />
                         </div>
                         <div className="col-md-3">
                             <div className="auth"><AuthControl/></div>

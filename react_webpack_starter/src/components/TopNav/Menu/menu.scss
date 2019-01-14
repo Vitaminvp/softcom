@@ -1,0 +1,23 @@
+@import "../../../style/variables";
+@import "../../../style/mixins";
+.menu{
+  display: flex;
+  height: $top_nav_height;
+  justify-content: center;
+  color: black;
+  li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  li + li{
+    margin-left: 30px;
+  }
+  &_link{
+    color: black;
+    @include transition;
+    &:hover{
+      color: $text-color;
+    }
+  }
+}

@@ -9,14 +9,14 @@
   background-size: cover;
   h1{
     padding-top: 20%;
-    color: white;
+    color: $bg-color;
     font-family: Overpass;
     font-size: 50px;
     font-weight: 600;
     line-height: 1.2;
   }
   p {
-    color: white;
+    color: $bg-color;
     font-size: 20px;
     line-height: 26px;
     margin: 4% 0;

@@ -1,10 +1,61 @@
 import React from 'react';
+import User from './User/User';
 import './user.scss';
 import Btn from "../button/button";
-import user from '../../assets/img/user-noah-2x.jpg';
 
+import {Ajax} from '../../utils/ajax';
+const URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=60';
+const URL1 = 'https://frontend-test-assignment-api.abz.agency/api/v1/users/1';
 
-const Requirements = () => {
+class Requirements extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            users: [],
+            user: {}
+        };
+    }
+    componentDidMount() {
+        Ajax.get(URL, (response) => {
+            this.setState( {users: response.users} );
+            console.log("this.state.users", this.state.users);
+        });
+        Ajax.get(URL1, (response) => {
+            this.setState( {user: response.user} );
+            console.log("this.state.user", this.state.user);
+        });
+    }
+    addComment(title, comment){
+        Ajax.post(URL, {
+            author: title,
+            text: comment
+        }, (response) => {
+            this.setState({
+                list: response
+            });
+        });
+
+    }
+    onConfirmChange(task){
+        Ajax.put(`${URL}/${task.id}`, task, (response) => {
+            this.setState((state) => {
+                state.list.forEach((item, i, arr) => {
+                    if(item.id == response.id){
+                        arr[i] = response;
+                    }
+                });
+                return state;
+            });
+        });
+    }
+    onDelete(task){
+        Ajax.delete(`${URL}/${task.id}`,  (response) => {
+            this.setState({
+                list: response
+            });
+        });
+    }
+    render(){
         return <section className="users">
             <div className="container">
                 <div className="row">
@@ -14,50 +65,7 @@ const Requirements = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-4">
-                        <div className="user">
-                            <div className="user__img"><img src={user} alt="user"/></div>
-                            <div className="user__info">
-                                <div className="user__info_name">Noah</div>
-                                <div className="user__info_position">Leading specialist of the Control Department </div>
-                                <div className="user__info_email">noah.controldepartment@gmail</div>
-                                <div className="user__info_phone">+38 (050) 678 03 24</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="user">
-                            <div className="user__img"><img src={user} alt="user"/></div>
-                            <div className="user__info">
-                                <div className="user__info_name">Noah</div>
-                                <div className="user__info_position">Leading specialist of the Control Department </div>
-                                <div className="user__info_email">noah.controldepartment@gmail</div>
-                                <div className="user__info_phone">+38 (050) 678 03 24</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="user">
-                            <div className="user__img"><img src={user} alt="user"/></div>
-                            <div className="user__info">
-                                <div className="user__info_name">Noah</div>
-                                <div className="user__info_position">Leading specialist of the Control Department </div>
-                                <div className="user__info_email">noah.controldepartment@gmail</div>
-                                <div className="user__info_phone">+38 (050) 678 03 24</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4">
-                        <div className="user">
-                            <div className="user__img"><img src={user} alt="user"/></div>
-                            <div className="user__info">
-                                <div className="user__info_name">Noah</div>
-                                <div className="user__info_position">Leading specialist of the Control Department </div>
-                                <div className="user__info_email">noah.controldepartment@gmail</div>
-                                <div className="user__info_phone">+38 (050) 678 03 24</div>
-                            </div>
-                        </div>
-                    </div>
+                    {this.state.users.length > 0 ? this.state.users.map(item =>  <User user={item} key={item.id}/> ) : null}
                 </div>
                 <div className="row">
                     <div className="col-12">
@@ -68,6 +76,8 @@ const Requirements = () => {
                 </div>
             </div>
         </section>;
+    }
+
 };
 
 export default Requirements;

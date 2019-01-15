@@ -1,0 +1,26 @@
+.user{
+  display: flex;
+  &__img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  &__info{
+    margin-left: 10px;
+    font-size: 14px;
+    &_name{
+      margin: 30px 0 15px;
+      color: black;
+      font-family: Overpass, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    &_position{
+      margin: 5px 0;
+    }
+    &_email{
+      margin: 5px 0;
+    }
+
+  }
+}

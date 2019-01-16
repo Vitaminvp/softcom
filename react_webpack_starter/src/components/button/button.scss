@@ -11,6 +11,7 @@
   padding: 0 125px;
   border-radius: 4px;
   text-decoration: none;
+  border: none;
   @include transition;
   &:hover{
     background-color: lighten( $accent, 10% );

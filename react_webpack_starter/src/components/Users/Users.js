@@ -61,7 +61,7 @@ class Requirements extends React.Component{
                 <div className="row">
                     <div className="col-12">
                         <div className="users__show_more">
-                            <Btn url={'#'} class={'btn btn__border'} value="Show more" />
+                            <Btn url={'#'} classString={'btn btn__border'} value="Show more" />
                         </div>
                     </div>
                 </div>

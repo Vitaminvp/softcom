@@ -20,7 +20,7 @@ class Select extends Component {
             <React.Fragment>
                 <select id="inputPosition" name="register__form_select">
                     <option value="">Select your position</option>
-                    {this.state.positions.map(position => <option key={position.id} value={position.name}>{position.name}</option>)}
+                    {this.state.positions.map(position => <option key={position.id} value={position.id}>{position.name}</option>)}
                 </select>
             </React.Fragment>
         );

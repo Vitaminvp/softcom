@@ -6,7 +6,6 @@ import Btn from "../button/button";
 import {Ajax} from '../../utils/ajax';
 const URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=60';
 const URL1 = 'https://frontend-test-assignment-api.abz.agency/api/v1/users/1';
-const URL_POST = 'https://frontend-test-assignment-api.abz.agency/api/v1/users';
 
 class Requirements extends React.Component{
     constructor(){

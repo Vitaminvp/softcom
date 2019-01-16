@@ -10,7 +10,7 @@ class Btn extends Component {
     }
     render() {
         const {url, classString, value} = this.props;
-        return <button href={url} className={ classString } onClick={(e) => this.click(e)}>{value}</button>;
+        return <a href={url} className={ classString } onClick={(e) => this.click(e)}>{value}</a>;
     }
 }
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import './register.scss';
-import Btn from "../button/button";
 import Select from "./Select/Select";
 import {Ajax} from '../../utils/ajax';
+const URL_POST = 'https://frontend-test-assignment-api.abz.agency/api/v1/users';
+const URL_TOKEN = 'https://frontend-test-assignment-api.abz.agency/api/v1/token\n';
+
 
 class Register extends React.Component {
     constructor(){
@@ -12,21 +14,34 @@ class Register extends React.Component {
         };
         this.addUser = this.addUser.bind(this);
     }
-    addUser(){
+    addUser(e){
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('name', document.getElementById('inputName').value);
+        formData.append('email', document.getElementById('inputEmail').value);
+        formData.append('phone',  document.getElementById('inputPhone').value);
+        formData.append('position_id', document.getElementById('inputPosition').value);
+        formData.append('photo', document.getElementById('inputFile').files[0]);
+        console.log(document.getElementById('inputName').value);
+        console.log(document.getElementById('inputEmail').value);
+        console.log(document.getElementById('inputPhone').value);
+        console.log(document.getElementById('inputPosition').value);
+        console.log(document.getElementById('inputFile').files[0]);
+        Ajax.get(URL_TOKEN, (response) => {
+            if(response.success){
+                this.setState( {token: response.token} );
+                console.log("this.state.token", this.state.token);
+                Ajax.post(URL_POST, formData, this.state.token, (response) => {
+                    this.setState({
+                        response: response
+                    });
+                    console.log("this.state.response", this.state.response);
+                });
+            }else{
+                console.log("errr");
+            }
+        });
 
-        // const formData = new FormData();
-        // formData.append('name', document.getElementById('inputName').value);
-        // formData.append('email', document.getElementById('inputEmail').value);
-        // formData.append('phone',  document.getElementById('inputPhone').value);
-        // formData.append('position_id', document.getElementById('inputPosition').value);
-        // formData.append('photo', document.getElementById('inputFile').files[0]);
-        console.log("formData");
-        // Ajax.post(URL_POST, formData, (response) => {
-        //     this.setState({
-        //         response: response
-        //     });
-        //     console.log("this.state.response", this.state.response);
-        // });
 
     }
     render(){
@@ -84,7 +99,7 @@ class Register extends React.Component {
                     <div className="row">
                         <div className="col-12">
                             <div className="register__form_submit">
-                                <Btn url={'#'} classString={'btn btn__submit'} value="Sign Up" onClick={this.addUser} />
+                                <button className="btn btn__submit" onClick={this.addUser} type="submit">Sign Up</button>
                             </div>
                         </div>
                     </div>

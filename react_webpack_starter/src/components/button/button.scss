@@ -10,7 +10,7 @@
   background-color: $accent;
   padding: 0 125px;
   border-radius: 4px;
-  text-decoration: none;
+  //text-decoration: none;
   border: none;
   @include transition;
   &:hover{
@@ -49,15 +49,5 @@
   &__submit{
     background-color: #d7d7d7;
     color: $link-color;
-  }
-}
-.btn-green{
-  background-color: $accent;
-  background-image:  radial-gradient(circle at 50% 0, #c1ff7f, $accent);
-  &:hover{
-    background-image: radial-gradient(circle at 50% 0, #c1ff7f,  #79c13a);
-  }
-  &:active{
-    background-image: radial-gradient(circle at 50% 0, #c1ff7f, #71af30);
   }
 }

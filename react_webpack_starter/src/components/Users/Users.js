@@ -6,6 +6,7 @@ import Btn from "../button/button";
 import {Ajax} from '../../utils/ajax';
 const URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=60';
 const URL1 = 'https://frontend-test-assignment-api.abz.agency/api/v1/users/1';
+const URL_POST = 'https://frontend-test-assignment-api.abz.agency/api/v1/users';
 
 class Requirements extends React.Component{
     constructor(){
@@ -25,17 +26,7 @@ class Requirements extends React.Component{
             console.log("this.state.user", this.state.user);
         });
     }
-    addComment(title, comment){
-        Ajax.post(URL, {
-            author: title,
-            text: comment
-        }, (response) => {
-            this.setState({
-                list: response
-            });
-        });
 
-    }
     onConfirmChange(task){
         Ajax.put(`${URL}/${task.id}`, task, (response) => {
             this.setState((state) => {
@@ -70,7 +61,7 @@ class Requirements extends React.Component{
                 <div className="row">
                     <div className="col-12">
                         <div className="users__show_more">
-                            <Btn url={'#'} class={'btn btn__border'} value="Show more"/>
+                            <Btn url={'#'} class={'btn btn__border'} value="Show more" />
                         </div>
                     </div>
                 </div>

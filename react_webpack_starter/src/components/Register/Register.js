@@ -28,6 +28,7 @@ class Register extends React.Component {
                 this.setState( {token: response.token} );
                 console.log("this.state.token", this.state.token);
                 Ajax.post(URL_POST, formData, this.state.token, (response) => {
+                    console.log("response", response);
                     this.setState({
                         response: response
                     });

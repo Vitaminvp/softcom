@@ -21,9 +21,6 @@ export class Ajax {
             xhr.abort();
         }, timeout);
         xhr.open('POST', urlpost);
-        // xhr.setRequestHeader('Content-Type', 'application/json');
-        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
         xhr.setRequestHeader( "Token", token );
         xhr.onreadystatechange = () => {
             if(xhr.readyState == 4 && xhr.status == 200){

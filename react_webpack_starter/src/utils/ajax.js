@@ -20,18 +20,17 @@ export class Ajax {
         const timer = setTimeout( () => {
             xhr.abort();
         }, timeout);
-        xhr.open('POST', urlpost, false);
+        xhr.open('POST', urlpost);
         // xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
         xhr.setRequestHeader( "Token", token );
-        // xhr.setRequestHeader( "authorization", "Bearer " + token );
         xhr.onreadystatechange = () => {
             if(xhr.readyState == 4 && xhr.status == 200){
                 clearTimeout(timer);
                 callback( JSON.parse(xhr.response) );
             }
         };
-        // xhr.send(JSON.stringify(data));
         xhr.send(data);
     }
     static put( urlpost, data, callback ){

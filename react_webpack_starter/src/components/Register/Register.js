@@ -27,7 +27,7 @@ class Register extends React.Component {
             if(response.success){
                 this.setState( {token: response.token} );
                 console.log("this.state.token", this.state.token);
-                Ajax.post(URL_POST, formData, this.state.token.toString(), (response) => {
+                Ajax.post(URL_POST, formData, this.state.token, (response) => {
                     this.setState({
                         response: response
                     });
@@ -56,7 +56,7 @@ class Register extends React.Component {
                         <h4>Attention! After successful registration and alert, update the list of users in the block from the top</h4>
                     </div>
                 </div>
-                <form action="" className="register__form">
+                <form action="POST" className="register__form" name="register__form">
                     <div className="row">
                         <div className="col-md-4">
                             <div className="register__form_input">

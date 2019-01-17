@@ -22,16 +22,12 @@ class Register extends React.Component {
         formData.append('phone',  document.getElementById('inputPhone').value);
         formData.append('position_id', document.getElementById('inputPosition').value);
         formData.append('photo', document.getElementById('inputFile').files[0]);
-        console.log(document.getElementById('inputName').value);
-        console.log(document.getElementById('inputEmail').value);
-        console.log(document.getElementById('inputPhone').value);
-        console.log(document.getElementById('inputPosition').value);
-        console.log(document.getElementById('inputFile').files[0]);
+
         Ajax.get(URL_TOKEN, (response) => {
             if(response.success){
                 this.setState( {token: response.token} );
                 console.log("this.state.token", this.state.token);
-                Ajax.post(URL_POST, formData, this.state.token, (response) => {
+                Ajax.post(URL_POST, formData, this.state.token.toString(), (response) => {
                     this.setState({
                         response: response
                     });

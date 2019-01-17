@@ -20,7 +20,7 @@ export class Ajax {
         const timer = setTimeout( () => {
             xhr.abort();
         }, timeout);
-        xhr.open('POST', urlpost);
+        xhr.open('POST', urlpost, false);
         // xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.setRequestHeader( "Token", token );
@@ -31,8 +31,8 @@ export class Ajax {
                 callback( JSON.parse(xhr.response) );
             }
         };
-        xhr.send(JSON.stringify(data));
-        // xhr.send(data);
+        // xhr.send(JSON.stringify(data));
+        xhr.send(data);
     }
     static put( urlpost, data, callback ){
         const xhr  = new XMLHttpRequest();

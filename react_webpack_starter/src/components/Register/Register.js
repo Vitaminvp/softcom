@@ -22,29 +22,28 @@ class Register extends React.Component {
         this.onInputChange = this.onInputChange.bind(this);
     }
     onInputChange(e){
-        const nameReg = /\b\w{3,60}\b/g;  //Строка длинной от 2-х до 60-ти символов.
-        const phoneReg = /^[\+]{0,1}380[\(]{0,1}([0-9]{9})[\)]{0,1}$/;
-        const emailReg = /\b\w{3,60}\b/g;
-        const target = e.target;
-        if(target.name='name'){
-            if( !nameReg.test(target.value) && !target.classList.contains('danger') ) {
-                target.classList.add('danger');
-            }else if(target.classList.contains('danger')){
-                target.classList.remove('danger');
-            }
-        }else if(target.name='email'){
-            if( !emailReg.test(target.value) && !target.classList.contains('danger') ) {
-                target.classList.add('danger');
-            }else if(target.classList.contains('danger')){
-                target.classList.remove('danger');
-            }
-        }else if(target.name='phone'){
-            if( !phoneReg.test(target.value) && !target.classList.contains('danger') ) {
-                target.classList.add('danger');
-            }else if(target.classList.contains('danger')){
-                target.classList.remove('danger');
-            }
+        const nameReg = /\b\w{2,60}\b/g;  //Строка длинной от 2-х до 60-ти символов.
+        // const phoneReg = /^[\+]{0,1}380[\(]{0,1}([0-9]{9})[\)]{0,1}$/;
+        // const emailReg = /\b\w{3,60}\b/g;
+        // const target = e.target;
+
+        if( !nameReg.test(e.target.value) && !e.target.classList.contains('danger') ) {
+            e.target.classList.add('danger');
+        }else if(e.target.classList.contains('danger')){
+            e.target.classList.remove('danger');
         }
+        // }else if(target.name='email'){
+        //     if( !emailReg.test(target.value) && !target.classList.contains('danger') ) {
+        //         target.classList.add('danger');
+        //     }else if(target.classList.contains('danger')){
+        //         target.classList.remove('danger');
+        //     }
+        // }else if(target.name='phone'){
+        //     if( !phoneReg.test(target.value) && !target.classList.contains('danger') ) {
+        //         target.classList.add('danger');
+        //     }else if(target.classList.contains('danger')){
+        //         target.classList.remove('danger');
+        //     }
 
 
         // if(e.target.value.length < 2 && e.target.value.length > 60 ){

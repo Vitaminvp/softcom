@@ -2,9 +2,7 @@ import React from 'react';
 import User from './User/User';
 import './user.scss';
 import {Ajax} from '../../utils/ajax';
-const URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/users?page=';
-const URL1 = 'https://frontend-test-assignment-api.abz.agency/api/v1/users/1';
-const NumUsers = 6;
+import { NumUsers, URL, URL1 } from "../constants";
 
 class Requirements extends React.Component{
     constructor(){
@@ -32,6 +30,7 @@ class Requirements extends React.Component{
     }
     componentDidMount() {
         Ajax.get(`${URL}${this.page}&count=${NumUsers}`, (response) => {
+            console.log("response.users", response.users);
             this.setState( {users: [...this.state.users, ...response.users]} );
         });
         Ajax.get(URL1, (response) => {
@@ -49,7 +48,10 @@ class Requirements extends React.Component{
                     </div>
                 </div>
                 <div className="row">
-                    {this.state.users.length > 0 ? this.state.users.map(item =>  <User user={item} key={item.id}/>) : null}
+                    {this.state.users.length > 0 ? this.state.users
+                        .sort((a, b) => b.registration_timestamp - a.registration_timestamp)
+                        .map(item =>  <User user={item} key={item.id}/>)
+                        : null}
                 </div>
                 <div className="row">
                     <div className="col-12">

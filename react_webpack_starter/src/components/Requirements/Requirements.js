@@ -1,6 +1,5 @@
 import React from 'react';
 import './requirements.scss';
-import Btn from "../button/button";
 import requirements__img from '../../assets/img/man-laptop-v1.svg';
 
 

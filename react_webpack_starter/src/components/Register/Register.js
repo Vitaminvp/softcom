@@ -2,26 +2,74 @@ import React from 'react';
 import './register.scss';
 import Select from "./Select/Select";
 import {Ajax} from '../../utils/ajax';
-const URL_POST = 'https://frontend-test-assignment-api.abz.agency/api/v1/users';
-const URL_TOKEN = 'https://frontend-test-assignment-api.abz.agency/api/v1/token\n';
+import { URL_POST, URL_TOKEN } from "../constants"
 
 
 class Register extends React.Component {
     constructor(){
         super();
         this.state = {
-            response: ''
+            response: '',
+            isDisabled: true
         };
+        this.inputName = document.getElementById('inputName');
+        this.inputEmail = document.getElementById('inputEmail');
+        this.inputPhone = document.getElementById('inputPhone');
+        this.inputPosition = document.getElementById('inputPosition');
+        this.inputFile = document.getElementById('inputFile');
+
         this.addUser = this.addUser.bind(this);
+        this.onInputChange = this.onInputChange.bind(this);
+    }
+    onInputChange(e){
+        const nameReg = /\b\w{3,60}\b/g;  //Строка длинной от 2-х до 60-ти символов.
+        const phoneReg = /^[\+]{0,1}380[\(]{0,1}([0-9]{9})[\)]{0,1}$/;
+        const emailReg = /\b\w{3,60}\b/g;
+        const target = e.target;
+        if(target.name='name'){
+            if( !nameReg.test(target.value) && !target.classList.contains('danger') ) {
+                target.classList.add('danger');
+            }else if(target.classList.contains('danger')){
+                target.classList.remove('danger');
+            }
+        }else if(target.name='email'){
+            if( !emailReg.test(target.value) && !target.classList.contains('danger') ) {
+                target.classList.add('danger');
+            }else if(target.classList.contains('danger')){
+                target.classList.remove('danger');
+            }
+        }else if(target.name='phone'){
+            if( !phoneReg.test(target.value) && !target.classList.contains('danger') ) {
+                target.classList.add('danger');
+            }else if(target.classList.contains('danger')){
+                target.classList.remove('danger');
+            }
+        }
+
+
+        // if(e.target.value.length < 2 && e.target.value.length > 60 ){
+        //     e.target.classList.add('danger');
+        // }else{
+        //     e.target.classList.remove('danger');
+        // }
     }
     addUser(e){
+
         e.preventDefault();
+
+        // const inputName = document.getElementById('inputName');
+        // const inputEmail = document.getElementById('inputEmail');
+        // const inputPhone = document.getElementById('inputPhone');
+        // const inputPosition = document.getElementById('inputPosition');
+        // const inputFile = document.getElementById('inputFile');
+
         const formData = new FormData();
-        formData.append('name', document.getElementById('inputName').value);
-        formData.append('email', document.getElementById('inputEmail').value);
-        formData.append('phone',  document.getElementById('inputPhone').value);
-        formData.append('position_id', document.getElementById('inputPosition').value);
-        formData.append('photo', document.getElementById('inputFile').files[0]);
+
+        formData.append('name', this.inputName.value);
+        formData.append('email', this.inputEmail.value);
+        formData.append('phone',  this.inputPhone.value);
+        formData.append('position_id', this.inputPosition.value);
+        formData.append('photo', this.inputFile.files[0]);
 
         Ajax.get(URL_TOKEN, (response) => {
             if(response.success){
@@ -62,7 +110,7 @@ class Register extends React.Component {
                         <div className="col-md-4">
                             <div className="register__form_input">
                                 <label htmlFor="name" className="register__form_label">Name</label>
-                                <input id="inputName" type="text" name="name" placeholder="Your name" required />
+                                <input id="inputName" type="text" name="name" placeholder="Your name" onChange={(e)=>this.onInputChange(e)} required />
                             </div>
                         </div>
                         <div className="col-md-4">
@@ -96,7 +144,7 @@ class Register extends React.Component {
                     <div className="row">
                         <div className="col-12">
                             <div className="register__form_submit">
-                                <button className="btn btn__submit" onClick={this.addUser} type="submit">Sign Up</button>
+                                <button className="btn btn__submit" onClick={this.addUser} type="submit" disabled={ this.state.isDisabled }>Sign Up</button>
                             </div>
                         </div>
                     </div>

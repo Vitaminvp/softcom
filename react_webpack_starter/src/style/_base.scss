@@ -42,7 +42,7 @@ p{
   font-weight: 400;
 }
 a:hover{
-  color: lighten($link-color, 10%);
+  color: lighten($bg-color, 10%);
   @include transition;
 }
 

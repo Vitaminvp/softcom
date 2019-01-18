@@ -18,7 +18,12 @@
         outline: none;
         box-shadow: none;
         border: solid 1px #3352a2;
+
       }
+      &.danger{
+        border: solid 1px red;
+      }
+
     }
     &_select, &_input, &_upload{
       margin-top: 40px;

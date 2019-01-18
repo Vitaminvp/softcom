@@ -47,7 +47,29 @@
     }
   }
   &__submit{
-    background-color: #d7d7d7;
-    color: $link-color;
+    background-color: $accent;
+    color: $bg-color;
+    cursor: pointer;
+    &:hover{
+      color: $bg-color;
+      background-color: lighten($accent, 10%);
+    }
+    &:active{
+      color: $bg-color;
+      background-color: lighten($accent, 10%);
+    }
+    &:disabled{
+      background-color: #d7d7d7;
+      color: $link-color;
+      cursor: not-allowed;
+      &:hover{
+        color: $link-color;
+        background-color: lighten(#d7d7d7, 5%);
+      }
+      &:active{
+        color: $link-color;
+        background-color: lighten(#d7d7d7, 5%);
+      }
+    }
   }
 }

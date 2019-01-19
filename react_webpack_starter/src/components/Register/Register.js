@@ -2,7 +2,7 @@ import React from 'react';
 import './register.scss';
 import Select from "./Select/Select";
 import {Ajax} from '../../utils/ajax';
-import { URL_POST, URL_TOKEN } from "../constants"
+import {REG, URL_POST, URL_TOKEN} from "../constants"
 
 
 class Register extends React.Component {
@@ -10,57 +10,52 @@ class Register extends React.Component {
         super();
         this.state = {
             response: '',
-            isDisabled: true
+            isDisabled: true,
+            timeStamp: 0
         };
+        this.addUser = this.addUser.bind(this);
+        this.onInputChange = this.onInputChange.bind(this);
+    }
+    componentDidMount(){
         this.inputName = document.getElementById('inputName');
         this.inputEmail = document.getElementById('inputEmail');
         this.inputPhone = document.getElementById('inputPhone');
         this.inputPosition = document.getElementById('inputPosition');
         this.inputFile = document.getElementById('inputFile');
-
-        this.addUser = this.addUser.bind(this);
-        this.onInputChange = this.onInputChange.bind(this);
+    }
+    reset(){
+        this.inputName.value = '';
+        this.inputEmail.value = '';
+        this.inputPhone.value = '';
+        this.inputPosition.value = 0;
+        this.inputFile.value = '';
     }
     onInputChange(e){
-        const nameReg = /\b\w{2,60}\b/g;  //Строка длинной от 2-х до 60-ти символов.
-        // const phoneReg = /^[\+]{0,1}380[\(]{0,1}([0-9]{9})[\)]{0,1}$/;
-        // const emailReg = /\b\w{3,60}\b/g;
-        // const target = e.target;
-
-        if( !nameReg.test(e.target.value) && !e.target.classList.contains('danger') ) {
-            e.target.classList.add('danger');
-        }else if(e.target.classList.contains('danger')){
-            e.target.classList.remove('danger');
+        const target = e.target;
+        console.log("target.id", target.value);
+        if( !REG[target.id]().test(target.value) ) {
+            target.classList.add('danger');
+        }else{
+            target.classList.remove('danger');
         }
-        // }else if(target.name='email'){
-        //     if( !emailReg.test(target.value) && !target.classList.contains('danger') ) {
-        //         target.classList.add('danger');
-        //     }else if(target.classList.contains('danger')){
-        //         target.classList.remove('danger');
-        //     }
-        // }else if(target.name='phone'){
-        //     if( !phoneReg.test(target.value) && !target.classList.contains('danger') ) {
-        //         target.classList.add('danger');
-        //     }else if(target.classList.contains('danger')){
-        //         target.classList.remove('danger');
-        //     }
+        console.log("REG['inputName']().test(this.inputName.value)", REG['inputName']().test(this.inputName.value));
+        console.log("REG['inputEmail']().test(this.inputEmail.value)", REG['inputEmail']().test(this.inputEmail.value));
+        console.log("REG['inputPhone']().test(this.inputPhone.value)", REG['inputPhone']().test(this.inputPhone.value));
+        console.log("REG['inputPosition']().test(this.inputPosition.value)", REG['inputPosition']().test(this.inputPosition.value));
+        console.log("REG['inputFile']().test(this.inputFile.value)", REG['inputFile']().test(this.inputFile.value));
 
-
-        // if(e.target.value.length < 2 && e.target.value.length > 60 ){
-        //     e.target.classList.add('danger');
-        // }else{
-        //     e.target.classList.remove('danger');
-        // }
+        if( REG['inputName']().test(this.inputName.value)
+            && REG['inputEmail']().test(this.inputEmail.value)
+            && REG['inputPhone']().test(this.inputPhone.value)
+            && REG['inputPosition']().test(this.inputPosition.value)
+            && REG['inputFile']().test(this.inputFile.value) )
+        {
+            this.setState({isDisabled: false})
+        }
     }
     addUser(e){
 
         e.preventDefault();
-
-        // const inputName = document.getElementById('inputName');
-        // const inputEmail = document.getElementById('inputEmail');
-        // const inputPhone = document.getElementById('inputPhone');
-        // const inputPosition = document.getElementById('inputPosition');
-        // const inputFile = document.getElementById('inputFile');
 
         const formData = new FormData();
 
@@ -69,10 +64,13 @@ class Register extends React.Component {
         formData.append('phone',  this.inputPhone.value);
         formData.append('position_id', this.inputPosition.value);
         formData.append('photo', this.inputFile.files[0]);
-
+        if(new Date() - this.state.timeStamp > 40*60*100)
         Ajax.get(URL_TOKEN, (response) => {
             if(response.success){
-                this.setState( {token: response.token} );
+                this.setState({
+                    token: response.token,
+                    timeStamp: new Date()
+                });
                 console.log("this.state.token", this.state.token);
                 Ajax.post(URL_POST, formData, this.state.token, (response) => {
                     console.log("response", response);
@@ -86,7 +84,7 @@ class Register extends React.Component {
             }
         });
 
-
+        document.forms.register__form.reset();
     }
     render(){
         const app = document.getElementById("app");
@@ -100,7 +98,7 @@ class Register extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        {/*<h2>Register to get a work</h2>*/}
+                        <h2>Register to get a work</h2>
                         <h4>Attention! After successful registration and alert, update the list of users in the block from the top</h4>
                     </div>
                 </div>
@@ -115,18 +113,18 @@ class Register extends React.Component {
                         <div className="col-md-4">
                             <div className="register__form_input">
                                 <label htmlFor="name" className="register__form_label">Email</label>
-                                <input id="inputEmail" type="email" name="email" placeholder="Your email" required />
+                                <input id="inputEmail" type="email" name="email" placeholder="Your email" onChange={(e)=>this.onInputChange(e)} required />
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="register__form_input">
                                 <label htmlFor="name" className="register__form_label">Phone</label>
-                                <input id="inputPhone" type="phone" name="phone" placeholder="+380(__) ___ __ __" required />
+                                <input id="inputPhone" type="phone" name="phone" placeholder="+380(__) ___ __ __" onChange={(e)=>this.onInputChange(e)} required />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="register__form_select">
-                                    <Select />
+                                    <Select onChange={this.onInputChange} />
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -134,7 +132,7 @@ class Register extends React.Component {
                                 <input className="register__form_upload-input" placeholder="Upload your photo"/>
                                 <div className="register__form_upload-div">
                                     <span>Upload</span>
-                                    <input id="inputFile" type="file" className="register__form_upload-div_input" name="upload-input" required/>
+                                    <input id="inputFile" type="file" className="register__form_upload-div_input" name="upload-input" onChange={(e)=>this.onInputChange(e)} required/>
                                 </div>
                                 <label className="register__form_label" htmlFor="upload-input">File format jpg  up to 5 MB, the minimum size of 70x70px</label>
                             </div>

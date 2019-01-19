@@ -7,9 +7,11 @@ export class Ajax {
         }, timeout);
         xhr.open('GET', url);
         xhr.onreadystatechange = () => {
-            if(xhr.readyState == 4 && xhr.status == 200){
+            if(xhr.readyState === 4 && xhr.status === 200){
                 clearTimeout(timer);
                 responseCallback(JSON.parse(xhr.response));
+            }else if(xhr.status === 404){
+                responseCallback( {users: []} );
             }
         };
         xhr.send();

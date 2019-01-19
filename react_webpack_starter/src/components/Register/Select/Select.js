@@ -7,7 +7,8 @@ class Select extends Component {
         super();
         this.state = {
             positions: []
-        }
+        };
+        this.changeSelect = this.changeSelect.bind(this);
     }
     componentDidMount(){
         Ajax.get(URL, (response) => {
@@ -15,15 +16,14 @@ class Select extends Component {
             console.log("this.state.positions", this.state.positions);
         });
     }
+    changeSelect(e){
+        this.props.onChange(e);
+    }
     render() {
-        return (
-            <React.Fragment>
-                <select id="inputPosition" name="register__form_select">
-                    <option value="">Select your position</option>
-                    {this.state.positions.map(position => <option key={position.id} value={position.id}>{position.name}</option>)}
-                </select>
-            </React.Fragment>
-        );
+        return (<select id="inputPosition" name="register__form_select" onChange={(e)=> this.changeSelect(e)}>
+                <option value={0}>Select your position</option>
+                {this.state.positions.map(position => <option key={position.id} value={position.id}>{position.name}</option>)}
+            </select>);
     }
 }
 

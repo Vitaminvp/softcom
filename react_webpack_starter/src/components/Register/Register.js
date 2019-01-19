@@ -51,6 +51,8 @@ class Register extends React.Component {
             && REG['inputFile']().test(this.inputFile.value) )
         {
             this.setState({isDisabled: false})
+        } else{
+            this.setState({isDisabled: true})
         }
     }
     addUser(e){

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './user.scss';
-import user from '../../../assets/img/default-user-img.jpg';
 import {limit} from "../../functions";
 
 class User extends Component {
@@ -45,7 +44,7 @@ class User extends Component {
         return (
             <div className="col-md-4">
                 <div className="user">
-                    <div className="user__img"><img src={photo ? photo : user} alt={name}/></div>
+                    <div className="user__img"><img src={photo} alt={name}/></div>
                     <div className="user__info">
                         <div className="user__info_name" data-tooltip={name} onMouseOver={(e)=>this.onMouseOver(e, name)} onMouseLeave={(e)=>this.onMouseLeave(e, name)}>{limit(name)}</div>
                         <div className="user__info_position">{position}</div>

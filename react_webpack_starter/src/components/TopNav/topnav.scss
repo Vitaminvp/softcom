@@ -8,6 +8,7 @@
   top: 0;
   background-color: $bg-color;
   z-index: 10;
+  @include transition;
   & .row{
     position: relative;
   }
@@ -15,8 +16,26 @@
     display: none;
   }
   @include tablet{
+    & .auth{
+      display: none;
+    }
     & .menu{
       display: none;
+    }
+    &.menu-visible{
+      height: auto;
+      & .auth{
+        display: flex;
+        &__info{
+          display: none;
+        }
+        &__avatar{
+          display: none;
+        }
+      }
+      & .menu{
+        display: flex;
+      }
     }
     &__hamburger{
       position: absolute;
@@ -30,8 +49,9 @@
   }
 }
 .toggle-menu {
+  position: absolute;
   right: 0;
-  top: 0;
+  top: 20px;
   text-align: center;
   width: 24px;
   height: 22px;

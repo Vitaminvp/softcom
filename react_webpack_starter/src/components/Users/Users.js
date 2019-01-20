@@ -2,7 +2,7 @@ import React from 'react';
 import User from './User/User';
 import './user.scss';
 import {Ajax} from '../../utils/ajax';
-import { NumUsers, URL, URL1 } from "../constants";
+import { NumUsers, URL } from "../constants";
 
 class Requirements extends React.Component{
     constructor(){
@@ -30,11 +30,9 @@ class Requirements extends React.Component{
     }
     componentDidMount() {
         Ajax.get(`${URL}${this.page}&count=${NumUsers}`, (response) => {
-            console.log("response.users", response.users);
             this.setState( {users: [...this.state.users, ...response.users]} );
         });
     }
-
     render(){
         return <section className="users">
             <div className="container">
@@ -60,7 +58,5 @@ class Requirements extends React.Component{
             </div>
         </section>;
     }
-
-};
-
+}
 export default Requirements;

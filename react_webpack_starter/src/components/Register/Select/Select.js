@@ -14,7 +14,6 @@ class Select extends Component {
     componentDidMount(){
         Ajax.get(URL, (response) => {
             this.setState( {positions: response.positions} );
-            console.log("this.state.positions", this.state.positions);
         });
     }
     changeSelect(e){
@@ -27,6 +26,5 @@ class Select extends Component {
             </select>);
     }
 }
-
 
 export default Select;

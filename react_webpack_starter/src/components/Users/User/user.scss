@@ -24,6 +24,7 @@
       margin: 5px 0;
     }
   }
+
   @include tablet{
     flex-direction: column;
     align-items: center;
@@ -36,4 +37,14 @@
       }
     }
   }
+}
+.tooltip {
+  position: fixed;
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-align: center;
+  font: 12px/1.3;
+  color: #fff;
+  background: #707070;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
 }

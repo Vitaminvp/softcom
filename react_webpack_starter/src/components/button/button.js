@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import './button.scss';
 
-class Btn extends Component {
-    click(e){
+const Btn = (props) => {
+    const click = (e) =>{
         e.preventDefault();
-        if(this.props.addUser !== undefined){
-            this.props.addUser();
+        if(props.addUser !== undefined){
+            props.addUser();
         }
-    }
-    render() {
-        const {url, classString, value} = this.props;
-        return <a href={url} className={ classString } onClick={(e) => this.click(e)}>{value}</a>;
-    }
-}
+    };
+
+    const {url, classString, value} = props;
+    return <a href={url} className={ classString } onClick={(e) => click(e)}>{value}</a>;
+};
 
 
 

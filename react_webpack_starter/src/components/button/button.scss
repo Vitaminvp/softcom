@@ -39,7 +39,8 @@
     border: 2px solid $accent;
     &:hover{
       color: lighten( $accent, 10% );
-      background-color: transparent;
+      background-color: lighten( $accent, 40% );
+      border: 2px solid lighten( $accent, 10% );
     }
     &:active{
       color: darken( $accent, 10% );
@@ -71,5 +72,9 @@
         background-color: lighten(#d7d7d7, 5%);
       }
     }
+  }
+  @include mobile{
+    padding: 0;
+    width: 100%;
   }
 }

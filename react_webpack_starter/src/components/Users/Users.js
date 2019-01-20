@@ -33,9 +33,6 @@ class Requirements extends React.Component{
             console.log("response.users", response.users);
             this.setState( {users: [...this.state.users, ...response.users]} );
         });
-        Ajax.get(URL1, (response) => {
-            this.setState( {user: response.user} );
-        });
     }
 
     render(){

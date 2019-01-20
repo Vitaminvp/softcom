@@ -31,25 +31,33 @@ const GetAcquainted = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-4">
-                        <img src={html} alt="HTML5"/>
-                        <h3>I'm in love with HTML</h3>
-                        <p>Hypertext Markup Language (HTML) is the standard markup language
-                            for creating web pages and web applications.</p>
+                    <div className="col-lg-4 acquainted__block">
+                        <div><img src={html} alt="HTML5"/></div>
+                        <div className="acquainted__block_info">
+                            <h3>I'm in love with HTML</h3>
+                            <p>Hypertext Markup Language (HTML) is the standard markup language
+                                for creating web pages and web applications.</p>
+                        </div>
+
                     </div>
-                    <div className="col-md-4">
-                        <img src={css} alt="CSS"/>
-                        <h3>CSS is my best friend</h3>
-                        <p>Cascading Style Sheets (CSS)
-                            is a style sheet language used for describing the presentation of a document
-                            written in a markup language like HTML.</p>
+                    <div className="col-lg-4 acquainted__block">
+                        <div><img src={css} alt="CSS"/></div>
+                        <div className="acquainted__block_info">
+                            <h3>CSS is my best friend</h3>
+                            <p>Cascading Style Sheets (CSS)
+                                is a style sheet language used for describing the presentation of a document
+                                written in a markup language like HTML.</p>
+                        </div>
+
                     </div>
-                    <div className="col-md-4">
-                        <img src={js} alt="JAVASCRIPT"/>
-                        <h3>JavaScript is my passion</h3>
-                        <p>JavaScript is a high-level, interpreted programming language.
-                            It is a language which is also characterized as dynamic, weakly typed,
-                            prototype-based and multi-paradigm.</p>
+                    <div className="col-lg-4 acquainted__block">
+                        <div><img src={js} alt="JAVASCRIPT"/></div>
+                        <div className="acquainted__block_info">
+                            <h3>JavaScript is my passion</h3>
+                            <p>JavaScript is a high-level, interpreted programming language.
+                                It is a language which is also characterized as dynamic, weakly typed,
+                                prototype-based and multi-paradigm.</p>
+                        </div>
                     </div>
                 </div>
             </div>

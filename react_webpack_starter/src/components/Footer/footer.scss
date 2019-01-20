@@ -4,14 +4,14 @@
   background-color: #6265ad;
   color: $bg-color;
   & a:hover{
-    color: darken($bg-color, 30%);
+    color: $accent;
   }
   .menu{
     justify-content: flex-end;
     &_link{
       color: $bg-color;
       &:hover{
-        color: darken($bg-color, 10%);
+        color: $accent;
       }
     }
   }
@@ -62,7 +62,7 @@
         }
         & a:hover span:before{
           @include transition;
-          color: darken($bg-color, 20%);
+          color: $accent;
         }
       }
       &-credits{
@@ -73,6 +73,45 @@
         align-items: flex-end;
         font-size: 12px;
         font-weight: 400;
+      }
+    }
+  }
+  @include mobile{
+    & .logo {
+      justify-content: center;
+    }
+    & .menu{
+      height: auto;
+      flex-direction: column;
+      margin-bottom: 30px;
+      & li{
+        margin: 7px 0;
+      }
+    }
+    & .social_menu{
+      display: none;
+    }
+    &__social{
+      &_links{
+        text-align: center;
+        & a{
+          padding-left: 0;
+          font-size: 18px;
+          &:before{
+            display: none;
+          }
+        }
+      }
+      &_icons{
+        text-align: center;
+        margin-top: 20px;
+        &-menu{
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+        &-credits{
+          justify-content: center;
+        }
       }
     }
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import './register.scss';
 import Select from "./Select/Select";
 import {Ajax} from '../../utils/ajax';
-import {REG, URL_POST, URL_TOKEN} from "../constants"
+import { REG, URL_POST, URL_TOKEN, TOKENTIME } from "../constants";
 
 
 class Register extends React.Component {
@@ -66,25 +66,32 @@ class Register extends React.Component {
         formData.append('phone',  this.inputPhone.value);
         formData.append('position_id', this.inputPosition.value);
         formData.append('photo', this.inputFile.files[0]);
-        if(new Date() - this.state.timeStamp > 40*60*100)
-        Ajax.get(URL_TOKEN, (response) => {
-            if(response.success){
-                this.setState({
-                    token: response.token,
-                    timeStamp: new Date()
-                });
-                console.log("this.state.token", this.state.token);
-                Ajax.post(URL_POST, formData, this.state.token, (response) => {
-                    console.log("response", response);
+        if((new Date() - this.state.timeStamp) > TOKENTIME){
+            Ajax.get(URL_TOKEN, (response) => {
+                if(response.success){
                     this.setState({
-                        response: response
+                        token: response.token,
+                        timeStamp: new Date()
                     });
-                    console.log("this.state.response", this.state.response);
-                });
-            }else{
-                console.log("errr");
-            }
-        });
+                    console.log("this.state.token", this.state.token);
+                    // Ajax.post(URL_POST, formData, this.state.token, (response) => {
+                    //     console.log("response", response);
+                    //     this.setState({
+                    //         response: response
+                    //     });
+                    //     console.log("this.state.response", this.state.response);
+                    // });
+                }else{
+                    console.log("errr");
+                }
+            });
+        }else{
+            // Ajax.post(URL_POST, formData, this.state.token, (response) => {
+            //     this.setState({
+            //         response: response
+            //     });
+            // });
+        }
 
         document.forms.register__form.reset();
     }

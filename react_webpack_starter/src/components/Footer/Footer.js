@@ -40,12 +40,7 @@ class Footer extends Component {
                         </div>
                         <div className="footer__social_icons">
                             <div className="row">
-                                <div className="col-sm-6 col-md-3">
-                                    <div className="footer__social_icons-credits">
-                                        © abz.agency specially for the test task
-                                    </div>
-                                </div>
-                                <div className="col-sm-6 col-md-9">
+                                <div className="order-md-1 col-md-6 col-lg-9">
                                     <ul className="footer__social_icons-menu">
                                         <li><a href="#"><span className="icon-facebook"></span></a></li>
                                         <li><a href="#"><span className="icon-linkedin"></span></a></li>
@@ -53,6 +48,11 @@ class Footer extends Component {
                                         <li><a href="#"><span className="icon-twitter"></span></a></li>
                                         <li><a href="#"><span className="icon-pinterest"></span></a></li>
                                     </ul>
+                                </div>
+                                <div className="col-md-6 col-lg-3">
+                                    <div className="footer__social_icons-credits">
+                                        © abz.agency specially for the test task
+                                    </div>
                                 </div>
                             </div>
                         </div>

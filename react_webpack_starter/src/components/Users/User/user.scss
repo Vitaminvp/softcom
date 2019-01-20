@@ -1,7 +1,7 @@
 @import "../../../style/mixins";
+
 .user{
   display: flex;
-  @include transition;
   &__img img{
     width: 80px;
     height: 80px;
@@ -23,6 +23,17 @@
     &_email{
       margin: 5px 0;
     }
-
+  }
+  @include tablet{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    &__info{
+      text-align: center;
+      margin-left: 0;
+      &_name{
+        margin: 15px 0 15px;
+      }
+    }
   }
 }

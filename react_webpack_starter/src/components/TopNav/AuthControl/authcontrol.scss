@@ -1,4 +1,5 @@
 @import "../../../style/variables";
+@import "../../../style/mixins";
 .auth{
   display: flex;
   justify-content: flex-end;
@@ -9,6 +10,9 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    & a:hover{
+      color: $accent;
+    }
     &_name{
       color: black;
       font-size: 14px;
@@ -38,9 +42,12 @@
       font-size: 20px;
       cursor: pointer;
       &:hover{
-        color: lighten($link-color, 10%);
+        opacity: 0.8;
       }
     }
 
+  }
+  @include tablet{
+    display: none;
   }
 }

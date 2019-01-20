@@ -1,17 +1,16 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './authcontrol.scss';
-import avatar from '../../../assets/img/avatar.png';
 
 export default class AuthControl extends React.Component{
     render(){
-        return  <React.Fragment>
+        const { name, email, photo } = this.props.user;
+        return  <div className="auth">
             <div className="auth__info">
-                <a href="#" className="auth__info_name">Superstar</a>
-                <a href="#" className="auth__info_email">Superstar@gmail.com</a>
+                <a href="#" className="auth__info_name">{name}</a>
+                <a href="#" className="auth__info_email">{email}</a>
             </div>
-            <div className="auth__avatar"><img src={avatar} alt="avatar"/></div>
+            <div className="auth__avatar"><img src={photo} alt="avatar"/></div>
             <div className="auth__icon"><span className="icon-sign-out"></span></div>
-        </React.Fragment>;
+        </div>;
     };
 };

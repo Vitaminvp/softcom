@@ -17,7 +17,8 @@
     color: black;
     @include transition;
     &:hover{
-      color: $text-color;
+      color: $accent;
     }
   }
+
 }

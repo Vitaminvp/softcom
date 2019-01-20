@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Ajax} from '../../../utils/ajax';
 const URL = 'https://frontend-test-assignment-api.abz.agency/api/v1/positions';
+import './select.scss';
 
 class Select extends Component {
     constructor(){
@@ -20,7 +21,7 @@ class Select extends Component {
         this.props.onChange(e);
     }
     render() {
-        return (<select id="inputPosition" name="register__form_select" onChange={(e)=> this.changeSelect(e)}>
+        return (<select id="inputPosition" name="register__form_select" className="inputPosition" onChange={(e)=> this.changeSelect(e)}>
                 <option value={0}>Select your position</option>
                 {this.state.positions.map(position => <option key={position.id} value={position.id}>{position.name}</option>)}
             </select>);

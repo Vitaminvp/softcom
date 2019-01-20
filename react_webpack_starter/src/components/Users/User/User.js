@@ -11,9 +11,9 @@ class User extends Component {
                 <div className="user">
                     <div className="user__img"><img src={photo ? photo : user} alt={name}/></div>
                     <div className="user__info">
-                        <div className="user__info_name">{limit(name)}</div>
+                        <div className="user__info_name" title={name}>{limit(name)}</div>
                         <div className="user__info_position">{position}</div>
-                        <div className="user__info_email">{limit(email)}</div>
+                        <div className="user__info_email" title={email}>{limit(email)}</div>
                         <div className="user__info_phone">{phone}</div>
                     </div>
                 </div>

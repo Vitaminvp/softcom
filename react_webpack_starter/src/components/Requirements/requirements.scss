@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 .requirements{
   background-image: url(../../assets/img/bg-2.jpg);
   background-repeat: no-repeat;
@@ -7,6 +8,7 @@
   h2{
     color: $bg-color;
     margin: 10% 0 3%;
+
   }
   &__img img{
     width: 100%;
@@ -17,5 +19,15 @@
     margin: 15px 0;
     line-height: 1.3;
     color: $text-light;
+  }
+  @include tablet{
+    h2{
+      margin: 20% 0 10%;
+    }
+  }
+  @include mobile{
+    & p{
+      text-align: center;
+    }
   }
 }

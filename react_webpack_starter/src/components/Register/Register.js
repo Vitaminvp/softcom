@@ -9,7 +9,7 @@ class Register extends React.Component {
     constructor(){
         super();
         this.state = {
-            response: '',
+            response: null,
             isDisabled: true,
             timeStamp: 0
         };
@@ -23,16 +23,8 @@ class Register extends React.Component {
         this.inputPosition = document.getElementById('inputPosition');
         this.inputFile = document.getElementById('inputFile');
     }
-    reset(){
-        this.inputName.value = '';
-        this.inputEmail.value = '';
-        this.inputPhone.value = '';
-        this.inputPosition.value = 0;
-        this.inputFile.value = '';
-    }
     onInputChange(e){
         const target = e.target;
-        console.log("target.id", target.value);
         if( !REG[target.id]().test(target.value) ) {
             target.classList.add('danger');
         }else{
@@ -73,24 +65,22 @@ class Register extends React.Component {
                         token: response.token,
                         timeStamp: new Date()
                     });
-                    console.log("this.state.token", this.state.token);
-                    // Ajax.post(URL_POST, formData, this.state.token, (response) => {
-                    //     console.log("response", response);
-                    //     this.setState({
-                    //         response: response
-                    //     });
-                    //     console.log("this.state.response", this.state.response);
-                    // });
+                    Ajax.post(URL_POST, formData, this.state.token, (response) => {
+                        console.log("response", response);
+                        this.setState({
+                            response: response
+                        });
+                    });
                 }else{
-                    console.log("errr");
+                    console.error("error");
                 }
             });
         }else{
-            // Ajax.post(URL_POST, formData, this.state.token, (response) => {
-            //     this.setState({
-            //         response: response
-            //     });
-            // });
+            Ajax.post(URL_POST, formData, this.state.token, (response) => {
+                this.setState({
+                    response: response
+                });
+            });
         }
 
         document.forms.register__form.reset();
@@ -103,7 +93,7 @@ class Register extends React.Component {
                 closestInput.value = e.target.value.replace("C:\\fakepath\\", "");
             }
         };
-        return <section className="register">
+        return <section className="register" id="add">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -158,6 +148,6 @@ class Register extends React.Component {
             </div>
         </section>;
     }
-};
+}
 
 export default Register;

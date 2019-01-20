@@ -1,14 +1,11 @@
 import React from 'react';
 import './menu.scss';
+import { MENU } from '../../data';
 
-export default class Menu extends React.Component{
-    render(){
-        return <ul className="menu">
-            <li><a href="#" className="menu_link">About me</a></li>
-            <li><a href="#" className="menu_link">Relationships</a></li>
-            <li><a href="#" className="menu_link">Requirements</a></li>
-            <li><a href="#" className="menu_link">Users</a></li>
-            <li><a href="#" className="menu_link">Sign Up</a></li>
-        </ul>;
-    };
+const Menu = () => {
+    return <ul className="menu">
+        { MENU.map(item => <li key={item.key}><a href={item.url} className="menu_link" alt={item.name} >{item.name}</a></li>) }
+    </ul>;
 };
+
+export default Menu;

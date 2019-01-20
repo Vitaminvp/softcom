@@ -24,3 +24,11 @@ export const SOCIAL_MENU = [
         {name: 'Help', url: '#', key: 'ert'}
     ]
 ];
+
+export const MENU = [
+    { name: 'About me', url: '#about', key: '35945'},
+    { name: 'Relationships', url: '#relationships', key: '34435'},
+    { name: 'Requirements', url: '#requirements', key: '76576'},
+    { name: 'Users', url: '#users', key: '56789'},
+    { name: 'Sign Up', url: '#add', key: '34522'}
+];

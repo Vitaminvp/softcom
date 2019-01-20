@@ -7,7 +7,7 @@ import css from '../../assets/img/css.svg';
 import js from '../../assets/img/javascript.svg';
 
 const GetAcquainted = () => {
-        return <section className="acquainted">
+        return <section className="acquainted" id="relationships">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -38,7 +38,6 @@ const GetAcquainted = () => {
                             <p>Hypertext Markup Language (HTML) is the standard markup language
                                 for creating web pages and web applications.</p>
                         </div>
-
                     </div>
                     <div className="col-lg-4 acquainted__block">
                         <div><img src={css} alt="CSS"/></div>
@@ -48,7 +47,6 @@ const GetAcquainted = () => {
                                 is a style sheet language used for describing the presentation of a document
                                 written in a markup language like HTML.</p>
                         </div>
-
                     </div>
                     <div className="col-lg-4 acquainted__block">
                         <div><img src={js} alt="JAVASCRIPT"/></div>

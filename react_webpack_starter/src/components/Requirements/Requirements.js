@@ -2,9 +2,8 @@ import React from 'react';
 import './requirements.scss';
 import requirements__img from '../../assets/img/man-laptop-v1.svg';
 
-
 const Requirements = () => {
-        return <section className="requirements">
+        return <section className="requirements" id="requirements">
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 offset-md-2 col-lg-12 offset-lg-0">

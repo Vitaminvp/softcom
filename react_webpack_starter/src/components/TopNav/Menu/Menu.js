@@ -4,7 +4,7 @@ import { MENU } from '../../data';
 
 const Menu = () => {
     return <ul className="menu">
-        { MENU.map(item => <li key={item.key}><a href={item.url} className="menu_link" alt={item.name} >{item.name}</a></li>) }
+        { MENU.map(item => <li key={item.key}><a href={item.url} className="menu_link" alt={item.name}  >{item.name}</a></li>) }
     </ul>;
 };
 

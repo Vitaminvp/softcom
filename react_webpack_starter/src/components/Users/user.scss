@@ -15,3 +15,19 @@
 .hidden{
   display: none;
 }
+#users {
+  position: relative; /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
+  border-top: 60px solid transparent;
+  margin-top: -60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+#users:before {
+  content: "";
+  position: absolute;
+  top: -2px; /* равен по модулю толщине border */
+  left: 0;
+  right: 0;
+  border-top: 2px solid transparent; /* собственно то, ради чего всё затевалось */
+}

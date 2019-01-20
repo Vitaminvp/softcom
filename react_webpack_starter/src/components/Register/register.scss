@@ -110,3 +110,19 @@
     }
   }
 }
+#add {
+  position: relative;
+  border-top: 60px solid transparent;
+  margin-top: -60px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  &:before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid transparent;
+  }
+}

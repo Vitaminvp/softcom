@@ -12,6 +12,7 @@ class TopNav extends Component {
         this.state = {
             user: {}
         };
+        this.toggleMenu = this.toggleMenu.bind(this);
     }
     componentDidMount() {
         Ajax.get(URL1, (response) => {
@@ -19,20 +20,31 @@ class TopNav extends Component {
             this.setState( {user: response.user} );
         });
     }
+    toggleMenu(e){
+        e.preventDefault();
+        const target = e.target.closest('.toggle-menu');
+        if(target.classList.contains('on')){
+            target.classList.remove('on');
+        }else{
+            target.classList.add('on');
+        }
+    }
     render() {
         return <div className="topnav">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-10 col-md-2">
+                        <div className="col-8 col-md-10 col-lg-2">
                             <Logo />
                         </div>
-                        <div className="col-md-7">
+                        <div className="col-4 col-md-2 col-lg-7">
                             <Menu />
                         </div>
-                        <div className="col-md-3">
+                        <div className="col-lg-3">
                             <AuthControl user={ this.state.user } />
                         </div>
-
+                        <div className="topnav__hamburger">
+                            <a href="#" class="toggle-menu" onClick={this.toggleMenu}><span></span></a>
+                        </div>
                     </div>
                 </div>
             </div>;

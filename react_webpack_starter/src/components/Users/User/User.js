@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 import './user.scss';
 import {limit} from "../../functions";
 
@@ -42,7 +43,13 @@ class User extends Component {
     render() {
         const {name, email, phone, position, photo} = this.props.user;
         return (
-            <div className="col-md-4">
+            <CSSTransitionGroup
+                component="div" className="col-md-4"
+                transitionName="example"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
                 <div className="user">
                     <div className="user__img"><img src={photo} alt={name}/></div>
                     <div className="user__info">
@@ -52,7 +59,7 @@ class User extends Component {
                         <div className="user__info_phone" >{phone}</div>
                     </div>
                 </div>
-            </div>
+            </CSSTransitionGroup>
         );
     }
 }

@@ -16,6 +16,7 @@
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-transition-group": "^1.2.1",
     "redux": "^4.0.1",
     "uniqid": "^5.0.3"
   },

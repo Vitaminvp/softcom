@@ -2,6 +2,9 @@
 @import "../../style/mixins";
 .requirements{
   background-image: url(../../assets/img/bg-2.jpg);
+  @include mobile{
+    background-image: url(../../assets/img/bg-2sm.jpg);
+  }
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 5%;

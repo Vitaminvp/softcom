@@ -5,6 +5,9 @@
   height: calc(100vh - 60px);
   margin-top: 60px;
   background-image: url(../../assets/img/bg-1.jpg);
+  @include mobile{
+    background-image: url(../../assets/img/bg-1sm.jpg);
+  }
   background-repeat: no-repeat;
   background-size: cover;
   h1{

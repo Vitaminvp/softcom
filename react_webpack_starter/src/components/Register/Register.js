@@ -2,8 +2,9 @@ import React from 'react';
 import './register.scss';
 import Select from "./Select/Select";
 import {Ajax} from '../../utils/ajax';
-import { REG, URL_POST, URL_TOKEN, TOKENTIME } from "../constants";
-
+import { REG, URL, URL_POST, URL_TOKEN, TOKENTIME, NumUsers } from "../constants";
+import { connect } from 'react-redux';
+import { overwriteUsers, setPage, buttonTrue } from '../../AC';
 
 class Register extends React.Component {
     constructor(){
@@ -30,11 +31,11 @@ class Register extends React.Component {
         }else{
             target.classList.remove('danger');
         }
-        console.log("REG['inputName']().test(this.inputName.value)", REG['inputName']().test(this.inputName.value));
-        console.log("REG['inputEmail']().test(this.inputEmail.value)", REG['inputEmail']().test(this.inputEmail.value));
-        console.log("REG['inputPhone']().test(this.inputPhone.value)", REG['inputPhone']().test(this.inputPhone.value));
-        console.log("REG['inputPosition']().test(this.inputPosition.value)", REG['inputPosition']().test(this.inputPosition.value));
-        console.log("REG['inputFile']().test(this.inputFile.value)", REG['inputFile']().test(this.inputFile.value));
+        // console.log("REG['inputName']().test(this.inputName.value)", REG['inputName']().test(this.inputName.value));
+        // console.log("REG['inputEmail']().test(this.inputEmail.value)", REG['inputEmail']().test(this.inputEmail.value));
+        // console.log("REG['inputPhone']().test(this.inputPhone.value)", REG['inputPhone']().test(this.inputPhone.value));
+        // console.log("REG['inputPosition']().test(this.inputPosition.value)", REG['inputPosition']().test(this.inputPosition.value));
+        // console.log("REG['inputFile']().test(this.inputFile.value)", REG['inputFile']().test(this.inputFile.value));
 
         if( REG['inputName']().test(this.inputName.value)
             && REG['inputEmail']().test(this.inputEmail.value)
@@ -47,10 +48,29 @@ class Register extends React.Component {
             this.setState({isDisabled: true})
         }
     }
+    modalWindow(){
+        const mydiv = document.createElement("DIV");
+        mydiv.className = 'modal';
+        mydiv.innerHTML = `<p>${this.state.response?this.state.response.message:''}</p>`;
+        document.forms.register__form.appendChild(mydiv);
+        setTimeout(()=> document.forms.register__form.removeChild(mydiv), 2000);
+    }
+    postAndGetUsers(formData){
+        Ajax.post(URL_POST, formData, this.state.token, (response) => {
+            this.setState({
+                response: response
+            });
+            Ajax.get(`${URL}1&count=${NumUsers}`, (response) => {
+                this.props.overwriteUsers(response.users);
+                this.props.setPage();
+                this.props.buttonTrue();
+                this.modalWindow();
+            });
+        });
+    }
     addUser(e){
 
         e.preventDefault();
-
         const formData = new FormData();
 
         formData.append('name', this.inputName.value);
@@ -58,6 +78,7 @@ class Register extends React.Component {
         formData.append('phone',  this.inputPhone.value);
         formData.append('position_id', this.inputPosition.value);
         formData.append('photo', this.inputFile.files[0]);
+
         if((new Date() - this.state.timeStamp) > TOKENTIME){
             Ajax.get(URL_TOKEN, (response) => {
                 if(response.success){
@@ -65,25 +86,17 @@ class Register extends React.Component {
                         token: response.token,
                         timeStamp: new Date()
                     });
-                    Ajax.post(URL_POST, formData, this.state.token, (response) => {
-                        console.log("response", response);
-                        this.setState({
-                            response: response
-                        });
-                    });
+                    this.postAndGetUsers(formData);
                 }else{
-                    console.error("error");
+                    console.error(error);
                 }
             });
         }else{
-            Ajax.post(URL_POST, formData, this.state.token, (response) => {
-                this.setState({
-                    response: response
-                });
-            });
+            this.postAndGetUsers(formData);
         }
-
         document.forms.register__form.reset();
+        this.setState({isDisabled: true})
+
     }
     render(){
         const app = document.getElementById("app");
@@ -149,5 +162,7 @@ class Register extends React.Component {
         </section>;
     }
 }
+export default connect((state) => ({
+    storeUsers: state.users
+}), { overwriteUsers, setPage, buttonTrue })(Register);
 
-export default Register;

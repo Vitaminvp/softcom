@@ -1,4 +1,5 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 
 .register{
   padding-top: 50px;
@@ -124,5 +125,26 @@
     left: 0;
     right: 0;
     border-top: 1px solid transparent;
+  }
+}
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  background-color: $footer-bg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 8px 26px 2px rgba(0,0,0,0.9);
+  z-index: 1;
+  @include transition;
+  & p{
+    color: $bg-color;
   }
 }

@@ -31,11 +31,6 @@ class Register extends React.Component {
         }else{
             target.classList.remove('danger');
         }
-        // console.log("REG['inputName']().test(this.inputName.value)", REG['inputName']().test(this.inputName.value));
-        // console.log("REG['inputEmail']().test(this.inputEmail.value)", REG['inputEmail']().test(this.inputEmail.value));
-        // console.log("REG['inputPhone']().test(this.inputPhone.value)", REG['inputPhone']().test(this.inputPhone.value));
-        // console.log("REG['inputPosition']().test(this.inputPosition.value)", REG['inputPosition']().test(this.inputPosition.value));
-        // console.log("REG['inputFile']().test(this.inputFile.value)", REG['inputFile']().test(this.inputFile.value));
 
         if( REG['inputName']().test(this.inputName.value)
             && REG['inputEmail']().test(this.inputEmail.value)
@@ -43,9 +38,9 @@ class Register extends React.Component {
             && REG['inputPosition']().test(this.inputPosition.value)
             && REG['inputFile']().test(this.inputFile.value) )
         {
-            this.setState({isDisabled: false})
+            this.setState({isDisabled: false});
         } else{
-            this.setState({isDisabled: true})
+            this.setState({isDisabled: true});
         }
     }
     modalWindow(){
@@ -95,7 +90,7 @@ class Register extends React.Component {
             this.postAndGetUsers(formData);
         }
         document.forms.register__form.reset();
-        this.setState({isDisabled: true})
+        this.setState({isDisabled: true});
 
     }
     render(){
@@ -118,20 +113,20 @@ class Register extends React.Component {
                     <div className="row">
                         <div className="col-md-4">
                             <div className="register__form_input">
-                                <label htmlFor="name" className="register__form_label">Name</label>
                                 <input id="inputName" type="text" name="name" placeholder="Your name" onChange={(e)=>this.onInputChange(e)} required />
+                                <label htmlFor="name" className="register__form_label">Name</label>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="register__form_input">
-                                <label htmlFor="name" className="register__form_label">Email</label>
                                 <input id="inputEmail" type="email" name="email" placeholder="Your email" onChange={(e)=>this.onInputChange(e)} required />
+                                <label htmlFor="name" className="register__form_label">Email</label>
                             </div>
                         </div>
                         <div className="col-md-4">
                             <div className="register__form_input">
-                                <label htmlFor="name" className="register__form_label">Phone</label>
                                 <input id="inputPhone" type="phone" name="phone" placeholder="+380(__) ___ __ __" onChange={(e)=>this.onInputChange(e)} required />
+                                <label htmlFor="name" className="register__form_label">Phone</label>
                             </div>
                         </div>
                         <div className="col-md-6">

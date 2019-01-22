@@ -16,12 +16,16 @@
       font-family: Overpass, sans-serif;
       font-size: 22px;
       font-weight: 600;
+      cursor: pointer;
+
     }
     &_position{
       margin: 5px 0;
     }
     &_email{
       margin: 5px 0;
+      cursor: pointer;
+
     }
   }
 

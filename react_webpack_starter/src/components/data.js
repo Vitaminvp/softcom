@@ -26,7 +26,7 @@ export const SOCIAL_MENU = [
 ];
 
 export const MENU = [
-    { name: 'About me', url: '#about', key: '35945'},
+    { name: 'About me', url: '#', key: '35945'},
     { name: 'Relationships', url: '#relationships', key: '34435'},
     { name: 'Requirements', url: '#requirements', key: '76576'},
     { name: 'Users', url: '#users', key: '56789'},

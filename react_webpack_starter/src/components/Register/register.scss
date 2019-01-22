@@ -19,10 +19,52 @@
         outline: none;
         box-shadow: none;
         border: solid 1px #3352a2;
-
+      &:after{
+        position: absolute;
+        content: "Error";
+        background-color: #000;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 100000;
+        color: red;
+      }
       }
       &.danger{
-        border: solid 1px red;
+        position: relative;
+        border: solid 1px rgba(255, 0, 0, 0.5);
+        &:focus{
+          border: solid 1px rgba(255, 0, 0, 1);
+        }
+        &:after{
+          position: absolute;
+          content: "Error";
+          background-color: #000;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          z-index: 100000;
+          color: red;
+        }
+        &:before{
+          position: absolute;
+          content: "Error";
+          background-color: #000;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 50px;
+          z-index: 100000;
+          color: red;
+        }
+        & + label{
+          color: rgba(255, 0, 0, 0.5);
+        }
+        &:focus + label{
+          color: rgba(255, 0, 0, 1);
+        }
       }
 
     }
@@ -103,6 +145,7 @@
       padding: 3px;
       top: 30px;
       left: 30px;
+      z-index: 1;
     }
     &_submit{
       text-align: center;

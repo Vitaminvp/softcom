@@ -3,6 +3,7 @@
 
 .btn{
   display: inline-block;
+  position: relative;
   color: #fefefe;
   font-size: 20px;
   font-weight: 700;
@@ -10,8 +11,8 @@
   background-color: $accent;
   padding: 0 125px;
   border-radius: 4px;
-  //text-decoration: none;
   border: none;
+  z-index: 1;
   @include transition;
   &:hover{
     background-color: lighten( $accent, 10% );

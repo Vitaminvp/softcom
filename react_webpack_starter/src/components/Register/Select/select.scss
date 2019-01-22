@@ -14,7 +14,13 @@
       background: lighten($accent, 40%);
     }
   }
-
+  & + label{
+    background-color: transparent;
+    &:after{
+      top: 30px!important;
+      left: -10px!important;
+    }
+  }
 }
 select:focus::-ms-value {
    background-color: gray;

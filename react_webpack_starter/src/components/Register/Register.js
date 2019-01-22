@@ -132,7 +132,7 @@ class Register extends React.Component {
                         <div className="col-md-6">
                             <div className="register__form_select">
                                 <Select onChange={this.onInputChange} />
-                                <label htmlFor="name" className="register__form_label register__form_label-select"></label>
+                                <label htmlFor="name" className="register__form_label"></label>
                             </div>
                         </div>
                         <div className="col-md-6">

@@ -74,6 +74,12 @@
         pointer-events: none;
         box-sizing: border-box;
       }
+      & select.danger{
+        & + label.register__form_label:after{
+          top: 30px;
+          left: -10px;
+        }
+      }
     }
     &_upload{
       position: relative;

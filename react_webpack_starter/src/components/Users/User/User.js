@@ -42,8 +42,7 @@ class User extends Component {
     }
     render() {
         const {name, email, phone, position, photo} = this.props.user;
-        const newPhone = phone.replace(/^[+380]([\d]{2})([\d]{3})([\d]{2})([\d]{2})$/g, `(${1}) ${2}-${3}-${4}`);
-        console.log("newPhone", newPhone);
+        const newPhone = phone.replace(/(^\+380)(\d{2})(\d{3})(\d{2})(\d{2}$)/, "$1 ($2) $3 $4 $5");
         return (
             <CSSTransitionGroup
                 component="div" className="col-md-4"
@@ -58,7 +57,7 @@ class User extends Component {
                         <div className="user__info_name" data-tooltip={name} onMouseOver={(e)=>this.onMouseOver(e, name)} onMouseLeave={(e)=>this.onMouseLeave(e, name)}>{limit(name)}</div>
                         <div className="user__info_position">{position}</div>
                         <div className="user__info_email" data-tooltip={email} onMouseOver={(e)=>this.onMouseOver(e, email)} onMouseLeave={(e)=>this.onMouseLeave(e, email)}>{limit(email)}</div>
-                        <div className="user__info_phone" >{phone}</div>
+                        <div className="user__info_phone" >{newPhone}</div>
                     </div>
                 </div>
             </CSSTransitionGroup>

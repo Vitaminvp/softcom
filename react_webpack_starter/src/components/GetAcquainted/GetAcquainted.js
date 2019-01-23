@@ -27,7 +27,7 @@ const GetAcquainted = () => {
                 </div>
                 <div className="row">
                     <div className="col-12">
-                        <h2>About my relationships with<br/> web-development</h2>
+                        <h2 className="acquainted__about">About my relationships with<br/> web-development</h2>
                     </div>
                 </div>
                 <div className="row">

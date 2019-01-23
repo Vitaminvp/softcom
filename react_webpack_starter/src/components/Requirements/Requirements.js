@@ -12,7 +12,7 @@ const Requirements = () => {
                 </div>
                 <div className="row">
                     <div className="order-md-1 col-md-6">
-                        <div className="acquainted__img"><img src={requirements__img} alt=""/></div>
+                        <div className="requirements__img"><img src={requirements__img} alt=""/></div>
                     </div>
                     <div className="col-md-6">
                         <p>Users want to find answers to their questions quickly and data shows that people really care about how quickly their pages load. The Search team announced speed would be a ranking signal for desktop searches in 2010 and as of this month (July 2018), page speed will be a ranking factor for mobile searches too.</p>

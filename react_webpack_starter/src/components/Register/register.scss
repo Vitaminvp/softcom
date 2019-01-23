@@ -2,9 +2,9 @@
 @import "../../style/mixins";
 
 .register{
-  padding-top: 50px;
+  padding: 50px 0 30px;
   h4{
-    margin: 30px 0 60px;
+    margin: 25px 0 25px;
   }
   &__form{
     input{
@@ -74,10 +74,17 @@
         pointer-events: none;
         box-sizing: border-box;
       }
-      & select.danger{
-        & + label.register__form_label:after{
-          top: 30px;
-          left: -10px;
+      & select{
+        & + label{
+          background-color: transparent;
+        }
+        &.danger{
+          & + label.register__form_label{
+            &:after{
+              top: 30px;
+              left: -10px;
+            }
+          }
         }
       }
     }

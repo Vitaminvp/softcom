@@ -29,8 +29,8 @@
     & img{
       width: 100%;
       height: auto;
-      max-width: 48px;
-      max-height: 48px;
+      max-width: 42px;
+      max-height: 42px;
       border-radius: 50%;
     }
   }
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     & span{
-      font-size: 20px;
+      font-size: 24px;
       cursor: pointer;
       &:hover{
         opacity: 0.8;

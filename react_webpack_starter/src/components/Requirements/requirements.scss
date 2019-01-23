@@ -7,21 +7,29 @@
   }
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 5%;
+  padding-bottom: 6.5%;
   h2{
     color: $bg-color;
-    margin: 10% 0 3%;
+    margin: 12.2% 0 3%;
 
   }
-  &__img img{
-    width: 100%;
-    height: auto;
-    display: block;
+  &__img {
+    img{
+      width: 80%;
+      height: auto;
+      display: block;
+      margin: 15px auto;
+    }
   }
+
+
   p{
-    margin: 15px 0;
-    line-height: 1.3;
+    margin: 14px 0;
+    line-height: 1.4;
     color: $text-light;
+    & + p{
+      margin-top: 22px;
+    }
   }
   @include tablet{
     h2{

@@ -1,7 +1,7 @@
 @import "../../style/variables";
 @import "../../style/mixins";
 .footer{
-  background-color: #6265ad;
+  background-color: $footer-bg;
   color: $bg-color;
   & a:hover{
     color: $accent;
@@ -16,11 +16,12 @@
     }
   }
   &__nav{
-    background-color: $footer-bg;
-    margin-bottom: 1px;
+    //background-color: $footer-bg;
+    //margin-bottom: 1px;
+    border-bottom: 1px solid #6265ad;
   }
   &__social{
-    background-color: $footer-bg;
+    //background-color: $footer-bg;
     padding-bottom: 30px;
     &_links{
       margin-top: 22px;

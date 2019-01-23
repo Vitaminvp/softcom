@@ -42,7 +42,8 @@ class User extends Component {
     }
     render() {
         const {name, email, phone, position, photo} = this.props.user;
-        const newEmail = email.replace();
+        const newPhone = phone.replace(/^[+380]([\d]{2})([\d]{3})([\d]{2})([\d]{2})$/g, `(${1}) ${2}-${3}-${4}`);
+        console.log("newPhone", newPhone);
         return (
             <CSSTransitionGroup
                 component="div" className="col-md-4"

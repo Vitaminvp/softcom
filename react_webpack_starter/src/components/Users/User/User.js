@@ -42,10 +42,11 @@ class User extends Component {
     }
     render() {
         const {name, email, phone, position, photo} = this.props.user;
+        const newEmail = email.replace();
         return (
             <CSSTransitionGroup
                 component="div" className="col-md-4"
-                transitionName="example"
+                transitionName="csstransition"
                 transitionAppear={true}
                 transitionAppearTimeout={500}
                 transitionEnterTimeout={500}

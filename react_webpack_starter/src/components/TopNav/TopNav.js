@@ -42,7 +42,6 @@ class TopNav extends Component {
                         <div className="col-12 col-sm-12 col-md-11 col-lg-7">
                             <Menu />
                         </div>
-
                         <div className="topnav__hamburger">
                             <a href="#" className={this.state.toggleMenu ? 'toggle-menu' : 'toggle-menu on'} onClick={this.toggleMenu}><span></span></a>
                         </div>

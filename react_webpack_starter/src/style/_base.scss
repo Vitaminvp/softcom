@@ -57,7 +57,29 @@ a:hover{
   display: flex;
 }
 
-
+.csstransition{
+  &-enter {
+    opacity: 0.01;
+    &.csstransition-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+    }
+  }
+  &-leave {
+    opacity: 1;
+    &.csstransition-leave-active {
+      opacity: 0.01;
+      transition: opacity 300ms ease-in;
+    }
+  }
+  &-appear {
+    opacity: 0.01;
+    &.csstransition-appear-active {
+      opacity: 1;
+      transition: opacity .5s ease-in;
+    }
+  }
+}
 
 
 

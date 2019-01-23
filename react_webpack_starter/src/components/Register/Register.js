@@ -31,7 +31,7 @@ class Register extends React.Component {
         }else{
             target.classList.remove('danger');
         }
-
+        console.log("this.inputPhone.value.replace", this.inputPhone.value.replace(/[ ()\-]/g, ''));
         if( REG['inputName']().test(this.inputName.value)
             && REG['inputEmail']().test(this.inputEmail.value)
             && REG['inputPhone']().test(this.inputPhone.value)
@@ -71,24 +71,24 @@ class Register extends React.Component {
         formData.append('name', this.inputName.value);
         formData.append('email', this.inputEmail.value);
         formData.append('phone',  this.inputPhone.value);
-        formData.append('position_id', this.inputPosition.value);
+        formData.append('position_id', this.inputPosition.value.replace(/[ ()\-]/g, ''));
         formData.append('photo', this.inputFile.files[0]);
 
-        if((new Date() - this.state.timeStamp) > TOKENTIME){
-            Ajax.get(URL_TOKEN, (response) => {
-                if(response.success){
-                    this.setState({
-                        token: response.token,
-                        timeStamp: new Date()
-                    });
-                    this.postAndGetUsers(formData);
-                }else{
-                    console.error(error);
-                }
-            });
-        }else{
-            this.postAndGetUsers(formData);
-        }
+        // if((new Date() - this.state.timeStamp) > TOKENTIME){
+        //     Ajax.get(URL_TOKEN, (response) => {
+        //         if(response.success){
+        //             this.setState({
+        //                 token: response.token,
+        //                 timeStamp: new Date()
+        //             });
+        //             this.postAndGetUsers(formData);
+        //         }else{
+        //             console.error(error);
+        //         }
+        //     });
+        // }else{
+        //     this.postAndGetUsers(formData);
+        // }
         document.forms.register__form.reset();
         this.setState({isDisabled: true});
 

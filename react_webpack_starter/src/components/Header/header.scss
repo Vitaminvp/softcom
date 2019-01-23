@@ -17,7 +17,7 @@
   background-position: center;
 ;
   h1{
-    padding-top: 17vh;
+    padding-top: 18vh;
     color: $bg-color;
     font-family: Overpass;
     font-size: 50px;
@@ -28,7 +28,7 @@
     color: $bg-color;
     font-size: 20px;
     line-height: 27px;
-    margin: 5% 0 6%;
+    margin: 5% 0 8%;
     letter-spacing: 0px;
     @include mobile{
       span{

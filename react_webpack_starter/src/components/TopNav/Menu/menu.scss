@@ -5,6 +5,9 @@
   height: $top_nav_height;
   justify-content: center;
   color: black;
+  @include desktop-lg{
+    padding-left: 30px;
+  }
   & li{
     display: flex;
     justify-content: center;

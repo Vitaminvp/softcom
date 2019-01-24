@@ -9,7 +9,7 @@ import id from 'uniqid';
 const Footer = () => {
     return (
         <section className="footer">
-            <div className="container">
+            <div className="container footer__container">
                 <div className="row footer__nav">
                     <div className="col-md-2">
                         <Logo color={true}/>

@@ -1,8 +1,12 @@
 @import "../../style/variables";
+@import "../../style/mixins";
 .users{
   padding-bottom: 7.5%;
+  @include desktop-lg{
+    padding-bottom: 105px;
+  }
   h2{
-    margin: 12.2% 0 2%;
+    margin: 137px 0 21px;
   }
   h4{
     margin-bottom: 62px;

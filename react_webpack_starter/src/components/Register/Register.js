@@ -74,21 +74,21 @@ class Register extends React.Component {
         formData.append('position_id', this.inputPosition.value.replace(/[ ()\-]/g, ''));
         formData.append('photo', this.inputFile.files[0]);
 
-        // if((new Date() - this.state.timeStamp) > TOKENTIME){
-        //     Ajax.get(URL_TOKEN, (response) => {
-        //         if(response.success){
-        //             this.setState({
-        //                 token: response.token,
-        //                 timeStamp: new Date()
-        //             });
-        //             this.postAndGetUsers(formData);
-        //         }else{
-        //             console.error(error);
-        //         }
-        //     });
-        // }else{
-        //     this.postAndGetUsers(formData);
-        // }
+        if((new Date() - this.state.timeStamp) > TOKENTIME){
+            Ajax.get(URL_TOKEN, (response) => {
+                if(response.success){
+                    this.setState({
+                        token: response.token,
+                        timeStamp: new Date()
+                    });
+                    this.postAndGetUsers(formData);
+                }else{
+                    console.error(error);
+                }
+            });
+        }else{
+            this.postAndGetUsers(formData);
+        }
         document.forms.register__form.reset();
         this.setState({isDisabled: true});
 
@@ -142,7 +142,7 @@ class Register extends React.Component {
                                     <span>Upload</span>
                                     <input id="inputFile" type="file" className="register__form_upload-div_input" name="upload-input" onChange={(e)=>this.onInputChange(e)} required/>
                                 </div>
-                                <label className="register__form_label" htmlFor="upload-input">File format jpg  up to 5 MB, the minimum size of 70x70px</label>
+                                <label className="register__form_label register__form_label-file" htmlFor="upload-input">File format jpg  up to 5 MB, the minimum size of 70x70px</label>
                             </div>
                         </div>
                     </div>

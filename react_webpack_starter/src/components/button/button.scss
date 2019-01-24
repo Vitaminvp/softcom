@@ -9,7 +9,7 @@
   font-weight: 700;
   line-height: 2;
   background-color: $accent;
-  padding: 0 114px;
+  padding: 0 112px;
   border-radius: 4px;
   border: none;
   z-index: 1;
@@ -38,6 +38,8 @@
     background-color: transparent;
     color: $accent;
     border: 2px solid $accent;
+    line-height: 1.8;
+    padding: 0 94px;
     &:hover{
       color: lighten( $accent, 10% );
       background-color: lighten( $accent, 40% );
@@ -52,6 +54,7 @@
     background-color: $accent;
     color: $bg-color;
     cursor: pointer;
+    padding: 0 108px;
     &:hover{
       color: $bg-color;
       background-color: lighten($accent, 10%);

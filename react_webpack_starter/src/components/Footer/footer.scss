@@ -15,9 +15,11 @@
       }
     }
   }
-  &__nav{
+  &__container{
     border-bottom: 1px solid #6265ad;
-    height: 85px;
+  }
+  &__nav{
+    height: 84px;
     .logo{
       height: 100%;
     }
@@ -39,9 +41,12 @@
         font-family: 'icomoon';
         position: absolute;
         left: 0;
-        font-size: 26px;
+        font-size: 25px;
+        @include desktop-lg{
+          font-size: 23px;
+        }
         top: 50%;
-        transform: translateY(-45%);
+        transform: translateY(-55%);
       }
     }
     &-email:before{
@@ -55,7 +60,10 @@
     }
   }
   &__icons{
-    margin: 30px 0 0;
+    margin: 21px 0 0;
+    @include desktop-lg{
+      margin: 20px 0 0;
+    }
     &-menu{
       display: flex;
       justify-content: flex-end;
@@ -74,6 +82,9 @@
       height: 100%;
       justify-content: flex-start;
       align-items: flex-end;
+      @include desktop-lg{
+        align-items: center;
+      }
       font-size: 12px;
       font-weight: 400;
     }
@@ -111,6 +122,7 @@
     &__icons{
       text-align: center;
       margin-top: 20px;
+
       &-menu{
         justify-content: center;
         margin-bottom: 20px;

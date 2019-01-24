@@ -22,6 +22,10 @@
       color: $link-color;
       font-size: 12px;
       font-weight: 400;
+      margin: 5px 0 5px;
+      @include desktop-lg{
+        margin-top: 5px;
+      }
     }
   }
   &__avatar{
@@ -29,9 +33,13 @@
     & img{
       width: 100%;
       height: auto;
-      max-width: 42px;
-      max-height: 42px;
+      max-width: 40px;
+      max-height: 40px;
       border-radius: 50%;
+      margin: 0 6px 0 2px;
+      @include desktop-lg{
+        margin: 0 6px 0 3px;
+      }
     }
   }
   &__icon{
@@ -45,7 +53,5 @@
         opacity: 0.8;
       }
     }
-
   }
-
 }

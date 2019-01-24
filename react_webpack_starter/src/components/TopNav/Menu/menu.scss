@@ -18,6 +18,7 @@
   }
   &_link{
     color: black;
+    margin-bottom: 7px;
     @include transition;
     &:hover{
       color: $accent;

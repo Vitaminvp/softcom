@@ -6,9 +6,6 @@
   margin-top: 60px;
   background-image: url(../../assets/img/bg-1.jpg);
 
-
-
-
   @include mobile{
     background-image: url(../../assets/img/bg-1sm.jpg);
   }
@@ -17,7 +14,10 @@
   background-position: center;
 ;
   h1{
-    padding-top: 18vh;
+    padding-top: 16.6vh;
+    @include desktop-lg{
+      padding-top: 18vh;
+    }
     color: $bg-color;
     font-family: Overpass;
     font-size: 50px;
@@ -27,9 +27,12 @@
   p {
     color: $bg-color;
     font-size: 20px;
-    line-height: 27px;
-    margin: 5% 0 8%;
+    line-height: 26px;
+    margin: 5% 0 9%;
     letter-spacing: 0px;
+    @include desktop-lg{
+      margin: 4% 0 6%;
+    }
     @include mobile{
       span{
         display: none;

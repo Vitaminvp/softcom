@@ -7,18 +7,25 @@
   }
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 6.5%;
+  padding-bottom: 144px;
+  @include desktop-lg{
+    padding-bottom: 102px;
+  }
   h2{
     color: $bg-color;
-    margin: 12.2% 0 3%;
+    margin: 137px 0 30px;
 
   }
   &__img {
     img{
-      width: 80%;
+      width: 96%;
+      margin: 32px 0 0 20px;
+      @include desktop-lg{
+        width: 77%;
+        margin: 18px 0 0 64px;
+      }
       height: auto;
       display: block;
-      margin: 15px auto;
     }
   }
 

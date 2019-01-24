@@ -31,6 +31,9 @@
     @include tablet{
       line-height: 24px;
     }
+    @include tablet{
+      margin: 6% 0 8%;
+    }
     margin: 5% 0 9%;
     letter-spacing: 0px;
     @include desktop-lg{

@@ -7,13 +7,22 @@
   }
   h2{
     margin: 137px 0 21px;
+    @include tablet{
+      margin: 116px 0 23px;
+    }
   }
   h4{
     margin-bottom: 62px;
+    @include tablet{
+      margin-bottom: 40px;
+    }
   }
   &__show_more{
     text-align: center;
     margin-top: 0;
+    @include tablet{
+      margin-top: 9px;
+    }
   }
 }
 .hidden{

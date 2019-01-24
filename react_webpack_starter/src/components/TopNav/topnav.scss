@@ -12,6 +12,9 @@
   & .row{
     position: relative;
   }
+  &__hamburger{
+    display: none;
+  }
   @include tablet{
     & .auth{
       display: none;
@@ -35,7 +38,6 @@
       }
     }
     &__hamburger{
-      display: none;
       position: absolute;
       right: 0;
       margin-right: 15px;

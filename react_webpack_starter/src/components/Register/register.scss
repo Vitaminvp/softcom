@@ -6,16 +6,28 @@
   @include desktop-lg{
     padding: 50px 0 26px;
   }
+  @include tablet{
+    padding: 50px 0 0;
+  }
   h2{
     margin: 23px 0 10px;
+    line-height: 1.2;
     @include desktop-lg{
       margin: 0px 0 10px;
     }
+    @include tablet{
+      margin: 12px 0 26px;
+    }
   }
   h4{
+    line-height: 1.2;
     margin: 23px 0 23px;
     @include desktop-lg{
       margin: 22px 0 25px;
+    }
+    @include tablet{
+      margin: 23px auto 12px;
+      max-width: 414px;
     }
   }
   &__form{
@@ -165,6 +177,9 @@
     &_submit{
       text-align: center;
       margin: 62px 0 120px;
+      @include tablet{
+        margin: 62px 0 118px;
+      }
     }
   }
 }

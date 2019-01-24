@@ -25,6 +25,9 @@
     background-color: transparent;
     border: none;
     padding: 0;
+    @include tablet{
+      margin-top: 4px;
+    }
     &:hover{
       color: lighten( $accent, 10% );
       background-color: transparent;

@@ -11,10 +11,16 @@
   @include desktop-lg{
     padding-bottom: 102px;
   }
+  @include tablet{
+    padding-bottom: 106px;
+  }
   h2{
     color: $bg-color;
     margin: 137px 0 30px;
-
+    @include tablet{
+      margin: 114px 0 24px;
+      line-height: 1.2;
+    }
   }
   &__img {
     img{
@@ -23,6 +29,11 @@
       @include desktop-lg{
         width: 77%;
         margin: 18px 0 0 64px;
+      }
+      @include tablet{
+        width: 100%;
+        max-width: 332px;
+        margin: 101px 0 0 20px;
       }
       height: auto;
       display: block;
@@ -36,11 +47,6 @@
     color: $text-light;
     & + p{
       margin-top: 22px;
-    }
-  }
-  @include tablet{
-    h2{
-      margin: 20% 0 10%;
     }
   }
   @include mobile{

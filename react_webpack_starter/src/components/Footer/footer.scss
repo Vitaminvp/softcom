@@ -34,6 +34,9 @@
       position: relative;
       color: $bg-color;
       padding-left: 36px;
+      @include tablet{
+        padding-left: 0;
+      }
       font-size: 20px;
       font-weight: 400;
       line-height: 44px;
@@ -44,6 +47,9 @@
         font-size: 25px;
         @include desktop-lg{
           font-size: 23px;
+        }
+        @include tablet{
+          display: none;
         }
         top: 50%;
         transform: translateY(-55%);

@@ -4,11 +4,16 @@
   @include desktop-lg{
     padding-bottom: 137px;
   }
-
+  @include tablet{
+    padding-bottom: 74px;
+  }
   h2{
     margin: 133px 0 30px;
     @include desktop-lg{
       margin: 133px 0 25px;
+    }
+    @include tablet{
+      margin: 112px 0 30px;
     }
     line-height: 1.2;
   }
@@ -28,12 +33,22 @@
       margin-left: 38px;
       width: 80%;
     }
+    @include tablet{
+      margin-top: 17px;
+      margin-left: 0px;
+      width: 100%;
+      max-width: 210px;
+    }
   }
   p{
     margin: 13px 0 9px;
     line-height: 21px;
     @include desktop-lg{
       line-height: 1.3;
+    }
+    @include tablet{
+      line-height: 22px;
+      margin: 13px 0 9px;
     }
     &+p{
       margin-top: 24px;
@@ -45,26 +60,39 @@
     @include desktop-lg{
       margin: 75px 0 49px;
     }
+    @include tablet{
+      margin: 126px 0 6px;
+    }
   }
   &__block{
     div{
       img{
         margin-bottom: 13px;
+        @include tablet{
+          margin-left: 50px;
+          max-height: 100px;
+        }
       }
     }
   }
   @include tablet{
     &__block{
       display: flex;
-      margin-bottom: 50px;
+      margin-bottom: 36px;
       &_info{
-        margin-left: 30px;
+        margin-left: 36px;
         h3{
           margin-top: 0;
+        }
+        p{
+          max-width: 462px;
         }
       }
       &:first-child{
         margin-top: 40px;
+      @include tablet{
+        margin-top: 38px;
+      }
       }
     }
   }

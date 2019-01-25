@@ -12,11 +12,11 @@
     padding-bottom: 63px;
   }
   h2{
-    margin: 137px 0 21px;
+    margin: 137px 0 18px;
     @include tablet{
       margin: 116px 0 23px;
     }
-    @include tablet{
+    @include mobile{
       margin: 67px 0 19px;
     }
   }
@@ -26,7 +26,7 @@
     @include tablet{
       margin-bottom: 40px;
     }
-    @include tablet{
+    @include mobile{
       text-align: center;
       max-width: 180px;
       margin: 0 auto 30px;

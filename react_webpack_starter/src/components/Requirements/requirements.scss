@@ -7,7 +7,7 @@
   }
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 144px;
+  padding-bottom: 143px;
   @include desktop-lg{
     padding-bottom: 102px;
   }
@@ -15,11 +15,11 @@
     padding-bottom: 106px;
   }
   @include mobile{
-    padding-bottom: 51px;
+    padding-bottom: 50px;
   }
   h2{
     color: $bg-color;
-    margin: 137px 0 30px;
+    margin: 131px 0 30px;
     line-height: 1.2;
     @include tablet{
       margin: 114px 0 24px;
@@ -43,7 +43,7 @@
         max-width: 332px;
         margin: 101px 0 0 20px;
       }
-      @include tablet{
+      @include mobile{
         width: 100%;
         max-width: 256px;
         margin: 26px auto 12px;

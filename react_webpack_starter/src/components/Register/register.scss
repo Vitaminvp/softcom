@@ -10,7 +10,7 @@
     padding: 50px 0 0;
   }
   @include mobile{
-    padding: 0px 0 0;
+    padding: 0 0 0;
   }
   h2{
     margin: 23px 0 10px;
@@ -156,7 +156,7 @@
         justify-content: center;
         align-items: center;
         @include mobile{
-          padding: 16px 18px;
+          padding: 16px 19px;
           font-size: 20px;
           .upload{
             width: 18px;
@@ -170,7 +170,7 @@
               right: 0;
               top: 50%;
               transform: translate(-50%, -50%);
-              font-size: 22px;
+              font-size: 23px;
               cursor: pointer;
 
             }

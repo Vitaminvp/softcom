@@ -12,15 +12,15 @@ import Register from "./Register/Register";
 
 class App extends Component {
     render() {
-        return      <React.Fragment>
-                        <TopNav />
-                        <Header/>
-                        <GetAcquainted />
-                        <Requirements />
-                        <Users />
-                        <Register/>
-                        <Footer/>
-                    </React.Fragment>
+        return  <React.Fragment>
+                    <TopNav />
+                    <Header/>
+                    <GetAcquainted />
+                    <Requirements />
+                    <Users />
+                    <Register/>
+                    <Footer/>
+                </React.Fragment>
 
     }
 }

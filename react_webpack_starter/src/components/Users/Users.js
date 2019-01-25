@@ -9,7 +9,6 @@ import { appendUsers, incPage, setPage, buttonFalse, buttonTrue } from '../../AC
 class Requirements extends React.Component{
     constructor(){
         super();
-        this.isButton = true;
         this.addUsers = this.addUsers.bind(this);
     }
     addUsers(e){

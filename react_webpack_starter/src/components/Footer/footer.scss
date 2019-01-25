@@ -104,12 +104,15 @@
       justify-content: center;
     }
     & .menu{
-      padding-top: 20px;
+      padding-top: 12px;
       height: auto;
       flex-direction: column;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
+      &_link{
+        margin-bottom: 3px;
+      }
       & li{
-        margin: 7px 0;
+        margin: 7px 0 0;
       }
     }
     & .social_menu{
@@ -117,9 +120,11 @@
     }
     &__links{
       text-align: center;
+      margin-top: 19px;
       & a{
         padding-left: 0;
         font-size: 18px;
+        line-height: 35px;
         &:before{
           display: none;
         }
@@ -127,11 +132,11 @@
     }
     &__icons{
       text-align: center;
-      margin-top: 20px;
+      margin-top: 18px;
 
       &-menu{
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
       }
       &-credits{
         justify-content: center;

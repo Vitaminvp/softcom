@@ -14,26 +14,39 @@
   @include tablet{
     padding-bottom: 106px;
   }
+  @include mobile{
+    padding-bottom: 51px;
+  }
   h2{
     color: $bg-color;
     margin: 137px 0 30px;
+    line-height: 1.2;
     @include tablet{
       margin: 114px 0 24px;
-      line-height: 1.2;
+    }
+    @include mobile{
+      margin: 65px 0 0;
     }
   }
   &__img {
     img{
-      width: 96%;
+      width: 100%;
+      max-width: 431px;
       margin: 32px 0 0 20px;
       @include desktop-lg{
-        width: 77%;
+        width: 100%;
+        max-width: 431px;
         margin: 18px 0 0 64px;
       }
       @include tablet{
         width: 100%;
         max-width: 332px;
         margin: 101px 0 0 20px;
+      }
+      @include tablet{
+        width: 100%;
+        max-width: 256px;
+        margin: 26px auto 12px;
       }
       height: auto;
       display: block;

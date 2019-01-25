@@ -112,7 +112,7 @@ class Register extends React.Component {
                 <form action="POST" className="register__form" name="register__form">
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="register__form_input">
+                            <div className="register__form_input register__form_input-first">
                                 <input id="inputName" type="text" name="name" placeholder="Your name" onChange={(e)=>this.onInputChange(e)} required />
                                 <label htmlFor="name" className="register__form_label">Name</label>
                             </div>
@@ -139,7 +139,7 @@ class Register extends React.Component {
                             <div className="register__form_upload">
                                 <input className="register__form_upload-input" placeholder="Upload your photo"/>
                                 <div className="register__form_upload-div">
-                                    <span>Upload</span>
+                                    <div className="upload"><span >Upload</span></div>
                                     <input id="inputFile" type="file" className="register__form_upload-div_input" name="upload-input" onChange={(e)=>this.onInputChange(e)} required/>
                                 </div>
                                 <label className="register__form_label register__form_label-file" htmlFor="upload-input">File format jpg  up to 5 MB, the minimum size of 70x70px</label>

@@ -1,20 +1,35 @@
 @import "../../style/variables";
 @import "../../style/mixins";
 .users{
-  padding-bottom: 7.5%;
+  padding-bottom: 120px;
   @include desktop-lg{
-    padding-bottom: 105px;
+    padding-bottom: 101px;
+  }
+  @include tablet{
+    padding-bottom: 71px;
+  }
+  @include mobile{
+    padding-bottom: 63px;
   }
   h2{
     margin: 137px 0 21px;
     @include tablet{
       margin: 116px 0 23px;
     }
+    @include tablet{
+      margin: 67px 0 19px;
+    }
   }
   h4{
     margin-bottom: 62px;
+    line-height: 1.2;
     @include tablet{
       margin-bottom: 40px;
+    }
+    @include tablet{
+      text-align: center;
+      max-width: 180px;
+      margin: 0 auto 30px;
     }
   }
   &__show_more{

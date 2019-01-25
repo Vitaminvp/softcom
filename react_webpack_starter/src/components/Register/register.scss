@@ -2,32 +2,44 @@
 @import "../../style/mixins";
 
 .register{
-  padding: 50px 0 15px;
+  padding: 14px 0 17px;
   @include desktop-lg{
-    padding: 50px 0 26px;
+    padding: 50px 0 28px;
   }
   @include tablet{
     padding: 50px 0 0;
+  }
+  @include mobile{
+    padding: 0px 0 0;
   }
   h2{
     margin: 23px 0 10px;
     line-height: 1.2;
     @include desktop-lg{
-      margin: 0px 0 10px;
+      margin: 0 0 10px;
     }
     @include tablet{
       margin: 12px 0 26px;
     }
+    @include mobile{
+      margin: 3px 0 0;
+    }
   }
   h4{
     line-height: 1.2;
-    margin: 23px 0 23px;
+    margin: 13px 0 25px;
     @include desktop-lg{
-      margin: 22px 0 25px;
+      margin: 12px 0 25px;
     }
     @include tablet{
       margin: 23px auto 12px;
       max-width: 414px;
+    }
+    @include mobile{
+      margin: 12px auto 0;
+      font-size: 16px;
+      line-height: 1.4;
+      max-width: 300px;
     }
   }
   &__form{
@@ -80,6 +92,12 @@
     }
     &_select, &_input, &_upload{
       margin-top: 40px;
+      @include mobile{
+        margin-top: 35px;
+        &-first{
+          margin-top: 32px;
+        }
+      }
     }
     &_select{
       width: 100%;
@@ -92,6 +110,12 @@
         position: absolute;
         color: black;
         right: 20px;
+        @include desktop-lg{
+          right: 13px;
+        }
+        @include mobile{
+          right: 11px;
+        }
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
@@ -131,6 +155,33 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile{
+          padding: 16px 18px;
+          font-size: 20px;
+          .upload{
+            width: 18px;
+            span{
+              display: none;
+            }
+            &:before{
+              position: absolute;
+              font-family: 'icomoon';
+              content: "\e90c";
+              right: 0;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 22px;
+              cursor: pointer;
+
+            }
+          }
+          .icon-upload{
+            display: block;
+            &:hover{
+              opacity: 0;
+            }
+          }
+        }
         &_input{
           position: absolute;
           top: 0;
@@ -167,6 +218,9 @@
       background-color: $bg-color;
       padding: 3px;
       top: 33px;
+      @include mobile{
+        top: 25px;
+      }
       left: 30px;
       z-index: 1;
       &-file.register__form_label{
@@ -179,6 +233,9 @@
       margin: 62px 0 120px;
       @include tablet{
         margin: 62px 0 118px;
+      }
+      @include mobile{
+        margin: 62px 0 72px;
       }
     }
   }

@@ -18,6 +18,12 @@
     @include desktop-lg{
       padding-top: 18vh;
     }
+    @include tablet{
+      padding-top: 16.4vh;
+    }
+    @include mobile{
+      padding-top: 14vh;
+    }
     color: $bg-color;
     font-family: Overpass;
     font-size: 50px;
@@ -28,13 +34,14 @@
     color: $bg-color;
     font-size: 20px;
     line-height: 26px;
+    margin: 5% 0 9%;
     @include tablet{
       line-height: 24px;
-    }
-    @include tablet{
       margin: 6% 0 8%;
     }
-    margin: 5% 0 9%;
+    @include mobile{
+      margin: 2% 0 12%;
+    }
     letter-spacing: 0px;
     @include desktop-lg{
       margin: 4% 0 6%;

@@ -43,9 +43,6 @@
     }
   }
   &__form{
-    input{
-
-    }
     input, select{
       width: 100%;
       border: 1px solid #b7b7b7;
@@ -88,7 +85,6 @@
           color: rgba(255, 0, 0, 1);
         }
       }
-
     }
     &_select, &_input, &_upload{
       margin-top: 40px;

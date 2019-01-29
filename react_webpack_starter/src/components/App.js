@@ -9,7 +9,6 @@ import Requirements from "./Requirements/Requirements";
 import Users from "./Users/Users";
 import Register from "./Register/Register";
 
-
 class App extends Component {
     render() {
         return  <React.Fragment>
@@ -20,8 +19,7 @@ class App extends Component {
                     <Users />
                     <Register/>
                     <Footer/>
-                </React.Fragment>
-
+                </React.Fragment>;
     }
 }
 

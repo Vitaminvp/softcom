@@ -13,7 +13,6 @@ class Requirements extends React.Component{
     }
     addUsers(e){
         e.preventDefault();
-
         Ajax.get(`${URL}${this.props.storePage+1}&count=${NumUsers}`, (response) => {
             if(response.users && (response.users.length < 6)){
                 this.props.buttonFalse();
@@ -23,7 +22,6 @@ class Requirements extends React.Component{
                 this.props.appendUsers(response.users);
                 this.props.incPage();
             }
-
         });
     }
     componentDidMount() {
@@ -58,7 +56,6 @@ class Requirements extends React.Component{
         </section>;
     }
 }
-
 
 export default connect((state) => ({
     storeUsers: state.users,

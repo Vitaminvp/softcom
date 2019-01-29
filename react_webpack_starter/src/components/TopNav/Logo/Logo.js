@@ -8,4 +8,5 @@ const Logo = (props) => {
             <img src={props.color ? logo_white : logo_black } alt="logo"/>
         </div>;
 };
+
 export default Logo;

@@ -69,16 +69,13 @@
   left: 0;
   top: 9px
 }
-
 .toggle-menu span:after {
   top: 18px
 }
-
 .toggle-menu span {
   position: relative;
   display: block
 }
-
 .toggle-menu span,
 .toggle-menu span:after,
 .toggle-menu span:before {
@@ -92,17 +89,14 @@
   -webkit-border-radius: 2px;
   border-radius: 2px
 }
-
 .toggle-menu.on span {
   background-color: transparent
 }
-
 .toggle-menu.on span:before {
   -webkit-transform: rotate(45deg) translate(-1px, 0);
   -ms-transform: rotate(45deg) translate(-1px, 0);
   transform: rotate(45deg) translate(-1px, 0)
 }
-
 .toggle-menu.on span:after {
   -webkit-transform: rotate(-45deg) translate(6px, -7px);
   -ms-transform: rotate(-45deg) translate(6px, -7px);

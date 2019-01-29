@@ -13,25 +13,19 @@ class User extends Component {
         const target = e.target;
         const tooltip = target.getAttribute('data-tooltip');
         if (!tooltip) return;
-
         const tooltipElem = document.createElement('div');
         tooltipElem.className = 'tooltip';
         tooltipElem.innerHTML = string;
         document.body.appendChild(tooltipElem);
-
         const coords = target.getBoundingClientRect();
-
         let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
-        if (left < 0) left = 0; // не вылезать за левую границу окна
-
+        if (left < 0) left = 0;
         let top = coords.top - tooltipElem.offsetHeight - 5;
-        if (top < 0) { // не вылезать за верхнюю границу окна
+        if (top < 0) {
             top = coords.top + target.offsetHeight + 5;
         }
-
         tooltipElem.style.left = left + 'px';
         tooltipElem.style.top = top + 'px';
-
         this.showingTooltip = tooltipElem;
     };
     onMouseLeave(){

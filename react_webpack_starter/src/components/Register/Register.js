@@ -64,16 +64,13 @@ class Register extends React.Component {
         });
     }
     addUser(e){
-
         e.preventDefault();
         const formData = new FormData();
-
         formData.append('name', this.inputName.value);
         formData.append('email', this.inputEmail.value);
         formData.append('phone',  this.inputPhone.value);
         formData.append('position_id', this.inputPosition.value.replace(/[ ()\-]/g, ''));
         formData.append('photo', this.inputFile.files[0]);
-
         if((new Date() - this.state.timeStamp) > TOKENTIME){
             Ajax.get(URL_TOKEN, (response) => {
                 if(response.success){
@@ -91,7 +88,6 @@ class Register extends React.Component {
         }
         document.forms.register__form.reset();
         this.setState({isDisabled: true});
-
     }
     render(){
         const app = document.getElementById("app");

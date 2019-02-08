@@ -6,6 +6,7 @@ import { NumUsers, URL } from "../constants";
 import { connect } from 'react-redux';
 import { appendUsers, incPage, setPage, buttonFalse, buttonTrue } from '../../AC';
 
+
 class Requirements extends React.Component{
     constructor(){
         super();
@@ -53,6 +54,7 @@ class Requirements extends React.Component{
                     </div>
                 </div>
             </div>
+
         </section>;
     }
 }

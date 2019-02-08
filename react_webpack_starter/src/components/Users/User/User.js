@@ -107,7 +107,7 @@ class User extends Component {
                 transitionAppearTimeout={500}
                 transitionEnterTimeout={500}
                 transitionLeaveTimeout={300}>
-                <StarRating />
+                <StarRating rating={3}  />
                 <div className="user">
                     <div className="user__img"><img src={photo} alt={name}/></div>
                     <div className="user__info">

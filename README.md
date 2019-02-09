@@ -1,7 +1,8 @@
 ## Different works
 
 **Layout**
- - **[Test](https://vitaminvp.github.io/softcom/react_webpack_starter/dist/)**
+ - **[Frontend test assignment api.abz.agency](https://vitaminvp.github.io/softcom/react_webpack_starter/dist/)**
+ - **[React Components library](https://vitaminvp.github.io/softcom/react-component-library/dist/)**
  - **[Favourite client](https://vitaminvp.github.io/softcom/FavouriteClient)**
  - **[FlyDoc page](https://vitaminvp.github.io/softcom/FlyDoc-page)**
  - **[Flydoc update](https://vitaminvp.github.io/softcom/flydoc-update)**

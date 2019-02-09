@@ -1,0 +1,65 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+.header {
+  padding: 60px 0;
+  width: 100%;
+  background-color: #cccccc;
+  h1{
+    padding-top: 16.6vh;
+    @include desktop-lg{
+      padding-top: 18vh;
+    }
+    @include tablet{
+      padding-top: 16.4vh;
+    }
+    @include mobile{
+      padding-top: 14vh;
+    }
+    color: $bg-color;
+    font-family: Overpass;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  p {
+    color: $bg-color;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 5% 0 9%;
+    @include tablet{
+      line-height: 24px;
+      margin: 6% 0 8%;
+    }
+    @include mobile{
+      margin: 2% 0 12%;
+    }
+    letter-spacing: 0px;
+    @include desktop-lg{
+      margin: 4% 0 6%;
+    }
+    @include mobile{
+      span{
+        display: none;
+      }
+    };
+  }
+  @include tablet{
+    h1{
+      font-size: 42px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+  @include mobile{
+    h1{
+      font-size: 30px;
+    }
+    p{
+      font-size: 16px;
+    }
+    [class^="col-"]{
+      text-align: center;
+    }
+  }
+}

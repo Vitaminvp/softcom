@@ -5,7 +5,6 @@ import {Ajax} from '../../utils/ajax';
 import { NumUsers, URL } from "../constants";
 import { connect } from 'react-redux';
 import { appendUsers, incPage, setPage, buttonFalse, buttonTrue } from '../../AC';
-import Toggle from "../Toggle/toggle";
 
 
 class Requirements extends React.Component{
